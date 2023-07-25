@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import drawerIcons from "@assets/icons/drawer";
 import { NavLink } from "react-router-dom";
 
+import logo from '../assets/icons/drawer/Frame55.svg'
 const SideDrawer = ({ className = "" }) => {
   const links = [
     {
