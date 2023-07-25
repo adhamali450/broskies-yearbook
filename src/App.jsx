@@ -148,6 +148,7 @@ function App() {
         "شنش",
         "SSSNOA",
         "ظاظا",
+        
       ],
       rating: 5,
       quote: `.عشان كل يوم بطقم جديد, فأفتكروني بتاع حشيش. شافوني شوفة خيش. فا حبيت اوضح. شباب شباشب علي مفيش`,
@@ -781,7 +782,7 @@ function App() {
           </div>
         </main>
 
-        <footer className="relative w-[75%] rounded-xl bg-[#333333] overflow-hidden">
+        <footer className="relative w-[75%] rounded-xl bg-[#333333] overflow-auto">
           <BroskiesBrowser
             className="flex w-max gap-2 justify-end items-center px-2 py-2"
             broskies={data.map((d) => ({ id: d.id, face: d.face }))}

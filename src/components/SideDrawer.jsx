@@ -2,9 +2,14 @@ import PropTypes from "prop-types";
 
 import drawerIcons from "@assets/icons/drawer";
 
+import logo from '../assets/icons/drawer/Frame55.svg'
 const SideDrawer = ({ className = "" }) => {
   return (
     <aside className={`${className} h-full`}>
+      <span>
+        <img src={logo} alt="" />
+        <br /><br /><br />
+      </span>
       <div className="flex flex-col">
         <button className="nav-btn active">
           <img src={drawerIcons.home} alt="home" />

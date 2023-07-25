@@ -14,9 +14,10 @@ const MiniGallery = ({ src, onImageSelected }) => {
           verticalPosition={src[0][1]}
           onClick={imageClickedHandler}
         />
-        <div className="absolute -top-8 rounded-full bg-violet-300 left-1/2 w-72 h-72 filter blur-2xl opacity-50"></div>
-        <div className="absolute rounded-full bg-fuchsia-300 -bottom-12 right-20 w-72 h-72 filter blur-2xl opacity-50">
-          <div className="absolute rounded-full bg-fuchsia-300 -bottom-12 right-20 w-72 h-72 filter blur-2xl opacity-50"></div>
+        
+        <div className="absolute rounded-full bg-fuchsia-300 -bottom-1 right-15 w-72 h-72 filter blur-3xl opacity-50">
+        </div>
+        <div className="absolute rounded-full bg-[#22d3ee] -bottom-1 left-1 w-72 h-72 filter blur-3xl opacity-50">
         </div>
       </div>
       <div className="col-start-2 img-grid grid-rows-2">
@@ -32,8 +33,8 @@ const MiniGallery = ({ src, onImageSelected }) => {
         />
       </div>
       <div className="relative col-start-3 img-grid grid-rows-[2fr_1fr]">
-        <div className="absolute top-0 -right-4 rounded-full bg-green-300 w-72 h-72 filter blur-2xl opacity-50"></div>
-        <div className="absolute rounded-full bg-blue-300 -bottom-12 left-20 w-72 h-72 filter blur-2xl opacity-50"></div>
+        <div className="absolute top-11 -right-16 rounded-full bg-[#bf0fff95] w-80 h-72 filter blur-2xl opacity-30"></div>
+        <div className="absolute bottom-1 -left-1 rounded-full bg-[#570fff] w-80 h-72 filter blur-2xl opacity-30"></div>
         <MiniImage
           src={src[3][0]}
           verticalPosition={src[3][1]}
