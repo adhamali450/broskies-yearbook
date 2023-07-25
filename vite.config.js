@@ -13,6 +13,9 @@ export default defineConfig({
       "@components": fileURLToPath(
         new URL("./src/components", import.meta.url)
       ),
+      "@pages": fileURLToPath(
+        new URL("./src/components/pages", import.meta.url)
+      ),
     },
   },
 });

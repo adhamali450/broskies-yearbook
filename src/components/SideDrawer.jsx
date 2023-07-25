@@ -1,32 +1,55 @@
 import PropTypes from "prop-types";
 
 import drawerIcons from "@assets/icons/drawer";
+import { NavLink } from "react-router-dom";
 
 const SideDrawer = ({ className = "" }) => {
+  const links = [
+    {
+      route: "/",
+      icon: drawerIcons.home,
+      text: "الهوم",
+      color: "#43BBFF",
+    },
+    {
+      route: "/members",
+      icon: drawerIcons.members,
+      text: "اعضاء القروب",
+      color: "#FF4AA1",
+    },
+    {
+      route: "/gallery",
+      icon: drawerIcons.gallery,
+      text: "صورنا",
+      color: "#78FF48",
+    },
+    {
+      route: "/leaderboard",
+      icon: drawerIcons.leaderboard,
+      text: "رتبة الاعضاء",
+      color: "#D764FF",
+    },
+  ];
   return (
     <aside className={`${className} h-full`}>
-      <div className="flex flex-col">
-        <button className="nav-btn active">
-          <img src={drawerIcons.home} alt="home" />
-          <span className="text-sm font-semibold text-[#43BBFF]">الهوم</span>
-        </button>
-        <button className="nav-btn">
-          <img src={drawerIcons.members} alt="members" />
-          <span className="text-sm font-semibold text-[#FF4AA1]">
-            اعضاء القروب
-          </span>
-        </button>
-        <button className="nav-btn">
-          <img src={drawerIcons.gallery} alt="gallery" />
-          <span className="text-sm font-semibold text-[#78FF48]">صورنا</span>
-        </button>
-        <button className="nav-btn">
-          <img src={drawerIcons.leaderboard} alt="leaderboard" />
-          <span className="text-sm font-semibold text-[#D764FF]">
-            رتبة الاعضاء
-          </span>
-        </button>
-      </div>
+      <ul className="flex flex-col">
+        {links.map((nav, index) => (
+          <NavLink
+            key={index}
+            to={nav.route}
+            className={`nav-btn`}
+            activeClassName="active"
+          >
+            <img src={nav.icon} alt={nav.text} />
+            <span
+              className="text-sm font-semibold"
+              style={{ color: nav.color }}
+            >
+              {nav.text}
+            </span>
+          </NavLink>
+        ))}
+      </ul>
     </aside>
   );
 };
