@@ -10,7 +10,7 @@ const MiniGallery = ({ src, onImageSelected, tags }) => {
   return (
     <div className="img-grid grid-cols-[500px_250px_250px] grid-rows-[450px]">
       <div className="relative col-start-1">
-        <div className="relative w-full h-full rounded-xl overflow-hidden">
+        <div className="relative w-full h-full rounded-xl overflow-auto">
           <MiniImage
             className="w-full h-full  z-10 rounded-xl cursor-zoom-in"
             src={src[0].slice(0, 2)}

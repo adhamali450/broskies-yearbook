@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+}
+.class{
+    display: flex;
+    width: 100%;
+    margin: 1rem;
+    position: relative;
+    box-sizing: border-box;
+    $border: 2px;
+    background: #0C0C0C;
+    background-clip: padding-box; 
+    border: solid $border transparent; 
+    border-radius: 1em;
+  padding: 2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      z-index: -1;
+      margin: -$border; 
+      border-radius: inherit; 
+      background: linear-gradient(to right  , rgba(136, 115, 109, 0), orange);
+/*       animation: borderAnimation 4s infinite ease-out ;*/ 
+}
+
+}
+
+/* @keyframes borderAnimation {
+  0% {
+    transform: translateY(-1%);
+  }
+
+  25% {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(1%);
+  }
+
+  75% {
+    transform: translateY(2px);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+} */
+/* @keyframes borderAnimation {
+  0% {
+     border-image-source: linear-gradient(to right, #00f, rgb(249, 2, 117));
+   }
+   
+   100% {
+     border-image-source: linear-gradient(to right, rgb(249, 2, 93), #00f);
+   }
+ }  */
+
+
+
+
+
+  
