@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
 
-import drawerIcons from "@assets/icons/drawer";
+import drawerIcons from "@icons/drawer";
 import { NavLink } from "react-router-dom";
 
-import logo from '../assets/icons/drawer/Frame55.svg'
+// TODO: logo
+// import logo from "../assets/icons/drawer/Frame55.svg";
 const SideDrawer = ({ className = "" }) => {
   const links = [
     {
@@ -32,18 +33,18 @@ const SideDrawer = ({ className = "" }) => {
     },
   ];
   return (
-    <aside className={`${className} h-full`}>
+    <aside className={`${className}`}>
       <ul className="flex flex-col">
         {links.map((nav, index) => (
           <NavLink
             key={index}
             to={nav.route}
             className={`nav-btn`}
-            activeClassName="active"
+            activeclassname="active"
           >
             <img src={nav.icon} alt={nav.text} />
             <span
-              className="text-sm font-semibold"
+              className="text-sm font-semibold w-max"
               style={{ color: nav.color }}
             >
               {nav.text}

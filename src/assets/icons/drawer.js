@@ -1,7 +1,7 @@
-import iconHome from "@assets/icons/drawer/icon-home.svg";
-import iconGallery from "@assets/icons/drawer/icon-gallery.svg";
-import iconMembers from "@assets/icons/drawer/icon-members.svg";
-import iconLeaderboard from "@assets/icons/drawer/icon-leaderboard.svg";
+import iconHome from "@icons/drawer/icon-home.svg";
+import iconGallery from "@icons/drawer/icon-gallery.svg";
+import iconMembers from "@icons/drawer/icon-members.svg";
+import iconLeaderboard from "@icons/drawer/icon-leaderboard.svg";
 
 const drawerIcons = {
   home: iconHome,

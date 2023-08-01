@@ -1,29 +1,69 @@
 import PropTypes from "prop-types";
-import { rangedRandom, rangedRandomInt } from "@utils";
+import { useRef, useEffect } from "react";
 
-const MiniImage = ({ src, verticalPosition = "center", onClick }) => {
+const MiniImage = ({
+  className = "",
+  src,
+  verticalPosition = "center",
+  blur = 10,
+  onClick = () => {},
+}) => {
+  const [thumbnail, image] = src;
+
+  const containerRef = useRef(null);
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const container = containerRef.current;
+    const img = containerRef.current.querySelector("img");
+    img.onload = () => {
+      container.style.filter = "blur(0px)";
+      img.style.opacity = 1;
+    };
+  }, [containerRef]);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const img = containerRef.current.querySelector("img");
+
+    img.style.opacity = 0;
+  }, [src]);
+
   return (
     <div
-      className="relative z-10 w-full h-full bg-cover rounded-xl cursor-zoom-in"
+      ref={containerRef}
+      className={`${className} relative bg-no-repeat`}
       onClick={() => onClick(src)}
       style={{
-        backgroundImage: `url('${src}')`,
+        backgroundSize: "cover",
+        backgroundImage: `url('${thumbnail}')`,
         backgroundPosition: verticalPosition,
-        transform: `rotate(${
-          rangedRandomInt(0, 1) == 0 ? rangedRandom(-2, 0) : rangedRandom(0, 2)
-        }deg)`,
-        transformOrigin: "center",
-        transition: "transform 100ms ease-in",
+        filter: `blur(${blur}px)`,
+        overflow: "hidden",
       }}
-    ></div>
+    >
+      <img
+        className="w-full h-full"
+        src={image}
+        alt=""
+        style={{
+          opacity: 0,
+          transition: "opacity 0.15s ease-in-out",
+          objectFit: "cover",
+          objectPosition: verticalPosition,
+        }}
+      />
+    </div>
   );
 };
 
-// prop validation
 MiniImage.propTypes = {
-  src: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  src: PropTypes.array.isRequired,
   verticalPosition: PropTypes.string,
-  onClick: PropTypes.func.isRequired,
+  blur: PropTypes.number,
+  onClick: PropTypes.func,
 };
 
 export default MiniImage;

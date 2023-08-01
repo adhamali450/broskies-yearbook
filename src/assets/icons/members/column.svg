@@ -1,0 +1,23 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M36 5H12V17H36V5Z" fill="#ABBDC6"/>
+<path d="M36 5C32.167 5 27.415 7.755 27.026 15.026C26.997 15.567 26.568 16 26.026 16H21.974C21.432 16 21.003 15.568 20.974 15.026C20.585 7.755 15.833 5 12 5C8.13 5 5 8.13 5 12C5 15.18 7.11 17.85 10 18.71C10.63 18.9 11.3 19 12 19C12.7 19 13.37 18.9 14 18.71V33.51C14 34.4 14.58 35.17 15.43 35.43L18 36.2L23 37.7L23.59 37.88C23.85 37.96 24.07 38.14 24.19 38.39L24.82 39.64C24.87 39.73 24.93 39.82 25 39.89C25.1 40 25.23 40.09 25.38 40.14L30 41.8L31.32 42.28C32.623 42.754 34 41.789 34 40.403V18.706C34.634 18.895 35.305 19 36 19C39.866 19 43 15.866 43 12C43 8.134 39.866 5 36 5Z" fill="url(#paint0_linear_208_219)"/>
+<path d="M23 23.5V37.7L18 36.2V23.5C18 22.12 19.12 21 20.5 21C21.19 21 21.82 21.28 22.27 21.73C22.72 22.18 23 22.81 23 23.5Z" fill="#ABBDC6"/>
+<path d="M30 23.5V41.8L25.38 40.14C25.23 40.09 25.1 40 25 39.89V23.5C25 22.12 26.12 21 27.5 21C28.19 21 28.82 21.28 29.27 21.73C29.72 22.18 30 22.81 30 23.5Z" fill="#ABBDC6"/>
+<path d="M14 13V18.71C13.37 18.9 12.7 19 12 19C11.3 19 10.63 18.9 10 18.71V13C10 11.9 10.9 11 12 11C13.1 11 14 11.9 14 13Z" fill="url(#paint1_radial_208_219)"/>
+<path d="M34 13V18.71C34.63 18.9 35.3 19 36 19C36.7 19 37.37 18.9 38 18.71V13C38 11.9 37.1 11 36 11C34.9 11 34 11.9 34 13Z" fill="url(#paint2_radial_208_219)"/>
+<defs>
+<linearGradient id="paint0_linear_208_219" x1="24" y1="0.478003" x2="24" y2="46.896" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DFE9F2"/>
+<stop offset="0.391" stop-color="#D6E0E9"/>
+<stop offset="1" stop-color="#BFC8D1"/>
+</linearGradient>
+<radialGradient id="paint1_radial_208_219" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(14.391 13.587) scale(4.676)">
+<stop stop-color="#ABBDC6"/>
+<stop offset="1" stop-color="#ABBDC6" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="paint2_radial_208_219" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(33.609 13.587) scale(4.676)">
+<stop stop-color="#ABBDC6"/>
+<stop offset="1" stop-color="#ABBDC6" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>
