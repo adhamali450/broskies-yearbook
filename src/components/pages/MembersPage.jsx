@@ -41,8 +41,7 @@ const MembersPage = ({ members }) => {
   return (
     <div className="relative container h-full flex flex-col">
       <div className="-z-10 absolute bg-[#FFAEDF] w-[40%] h-[40%] translate-x-1/2 right-0 rounded-[100%] blur-3xl opacity-20"></div>
-      {/* <span className="absolute inline-block w-[2px] h-full bg-[#FFD600] right-7"></span> */}
-      <div className="py-8 mr-[21px]">
+      <div className="py-8 px-6">
         <Header title="أعمداء" icon={membersIcons.column} />
         <MembersGrid members={members.filter((m) => m.role === "عمود")} />
         <Header title="أعضاء" icon={membersIcons.members} />
