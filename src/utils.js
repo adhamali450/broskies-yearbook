@@ -29,4 +29,10 @@ const getLang = (lyrics) => {
   return arabicCount > englishCount ? "ar" : "en";
 };
 
-export { rangedRandom, rangedRandomInt, getLang };
+const arNum = (number) => {
+  const arabicNumbers = ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"];
+
+  return String(number).replace(/\d/g, (digit) => arabicNumbers[digit]);
+};
+
+export { rangedRandom, rangedRandomInt, getLang, arNum };

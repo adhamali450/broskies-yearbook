@@ -2,7 +2,9 @@ import MiniImage from "@components/MiniImage";
 import Rating from "@components/Rating";
 // import humanFormat from "human-format";
 import Podium from "@components/Podium";
+import styles from "@pages/LeaderboardPage.module.sass";
 import PropTypes from "prop-types";
+import { arNum } from "@/utils";
 
 const LeaderboardPage = ({ leaderboardDetails }) => {
   leaderboardDetails = leaderboardDetails.sort((a, b) => b.points - a.points);
@@ -20,37 +22,34 @@ const LeaderboardPage = ({ leaderboardDetails }) => {
       />
 
       <div className="w-full h-full flex flex-col items-start gap-2 py-8">
-        {leaderboardDetails.slice(3).map((user, index) => (
-          <div
-            className="flex gap-3 items-center w-[80%] mx-auto pb-2"
-            key={index}
-            style={{
-              borderBottom: `2px solid rgba(95, 89, 89, 0.54)`,
-            }}
-          >
-            <span
-              className="inline-block font-black rounded-full px-2"
-              style={{
-                backgroundColor: "#d764ff",
-                color: "rgba(0,0,0,0.7)",
-              }}
-            >
-              {index + 4}
-            </span>
-            <MiniImage
-              className="w-[70px] h-[70px] rounded-md"
-              src={user.face}
-            />
-            <div className="flex flex-col gap-1 grow">
-              <span className="font-bold">{user.name}</span>
-              <span className="text-sm">{user.points}</span>
+        {leaderboardDetails.slice(3).map((user, index) => {
+          const rating = `${arNum(5)}/${arNum(user.rating)}`;
+          return (
+            <div className={styles["member-row"]} key={index}>
+              <span
+                className="inline-block font-black rounded-full px-2"
+                style={{
+                  backgroundColor: "#d764ff",
+                  color: "rgba(0,0,0,0.7)",
+                }}
+              >
+                {arNum(index + 4)}
+              </span>
+              <MiniImage
+                className="w-[70px] h-[70px] rounded-md"
+                src={user.face}
+              />
+              <div className="flex flex-col gap-1 grow">
+                <span className="font-bold">{user.name}</span>
+                <span className="text-sm">{arNum(user.points)}</span>
+              </div>
+              <div className="grid grid-cols-[1fr_40px] gap-3">
+                <Rating rating={user.rating} size={15} />
+                <span className="text-sm justify-self-end">{rating}</span>
+              </div>
             </div>
-            <div className="flex items-center gap-3">
-              <Rating rating={user.rating} size={15} />
-              <span className="text-sm">5.0/{user.rating}</span>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
