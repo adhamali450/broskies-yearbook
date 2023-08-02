@@ -37,7 +37,7 @@ const MiniImage = ({
       <div
         ref={containerRef}
         className={`bg-no-repeat w-full h-full`}
-        onClick={() => onClick(src)}
+        onClick={() => onClick(src[1])}
         style={{
           backgroundSize: "cover",
           backgroundImage: `url('${thumbnail}')`,

@@ -2,7 +2,10 @@ import { useState } from "react";
 import Rating from "@components/Rating";
 import BroskiesBrowser from "@components/BroskiesBrowser";
 import MiniGallery from "@components/MiniGallery";
-// import Lightbox from "react-lightbox-component";
+import Lightbox from "yet-another-react-lightbox";
+import Download from "yet-another-react-lightbox/plugins/download";
+
+import "yet-another-react-lightbox/styles.css";
 
 import PropTypes from "prop-types";
 
@@ -10,11 +13,10 @@ import isommetricGrid from "@assets/isometric-grid.svg";
 
 import { getLang } from "@utils";
 const HomePage = ({ details }) => {
-  // const topRated = details.filter((d) => d.rating == 5);
   const [selectedBroskie, setSelectedBroskie] = useState(
     details.find((d) => d.id === 0)
   );
-  const [selectedImage, setSelectedImage] = useState("");
+  const [lightboxSrcset, setLightboxSrcset] = useState(undefined);
 
   const broskieChangedHandler = (id) => {
     setSelectedBroskie(details.find((d) => d.id === id));
@@ -33,16 +35,14 @@ const HomePage = ({ details }) => {
           <MiniGallery
             src={selectedBroskie.images}
             tags={selectedBroskie.tags}
-            onImageSelected={(img) => {
-              setSelectedImage(img);
+            onImageSelected={(srcset) => {
+              setLightboxSrcset(srcset);
             }}
           />
 
           <div className="flex justify-between items-center mt-5 ">
             <div className="flex flex-col gap-2">
-              <div style={{}}>
-                <Rating rating={selectedBroskie.rating} />
-              </div>
+              <Rating rating={selectedBroskie.rating} />
               <h1 className="text-4xl font-bold">{selectedBroskie.name}</h1>
             </div>
 
@@ -67,6 +67,16 @@ const HomePage = ({ details }) => {
         />
       </footer>
 
+      <Lightbox
+        open={lightboxSrcset}
+        close={() => setLightboxSrcset(undefined)}
+        slides={lightboxSrcset?.map((img) => ({
+          src: img,
+          downloadFilename: img.split("/").pop() + ".jpg",
+        }))}
+        controller={{ closeOnPullDown: true, closeOnBackdropClick: true }}
+        plugins={[Download]}
+      />
       {/* <Lightbox
         isOpen={selectedImage !== ""}
         images={[

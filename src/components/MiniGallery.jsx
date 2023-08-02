@@ -1,10 +1,17 @@
+import { memo } from "react";
 import PropTypes from "prop-types";
 import MiniImage from "@components/MiniImage";
 import Badges from "@components/Badges";
 
 const MiniGallery = ({ src, onImageSelected, tags }) => {
   const imageClickedHandler = (img) => {
-    onImageSelected(img);
+    const arr = src.map((pair) => pair[1]);
+    const index = arr.indexOf(img);
+
+    arr.splice(index, 1);
+    arr.unshift(img);
+
+    onImageSelected(arr);
   };
 
   return (
@@ -20,7 +27,7 @@ const MiniGallery = ({ src, onImageSelected, tags }) => {
           />
 
           {tags && (
-            <div className="z-20 absolute inset-0 bg-gradient-to-t from-rgba-black-0.8 via-transparent to-transparent p-5 flex items-end">
+            <div className="z-20 absolute inset-0 bg-gradient-to-t from-rgba-black-0.8 via-transparent to-transparent p-5 flex items-end pointer-events-none">
               <Badges
                 className="max-w-[400px] flex flex-wrap gap-1"
                 tags={tags}
@@ -76,4 +83,8 @@ MiniGallery.propTypes = {
   tags: PropTypes.array,
 };
 
-export default MiniGallery;
+const memomized = memo(MiniGallery, (prev, next) =>
+  prev.src.every((src, i) => src[0] === next.src[i][0])
+);
+
+export default memomized;

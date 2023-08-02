@@ -1,6 +1,5 @@
 import MiniImage from "@components/MiniImage";
 import Rating from "@components/Rating";
-// import humanFormat from "human-format";
 import Podium from "@components/Podium";
 import styles from "@pages/LeaderboardPage.module.sass";
 import PropTypes from "prop-types";
