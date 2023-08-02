@@ -22,12 +22,12 @@ const HomePage = ({ details }) => {
 
   return (
     <div className="h-[100vh] flex flex-col items-center">
-      <div
+      {/* <div
         className="absolute -z-10 opacity-50 -translate-x-1/2 left-1/2 bottom-0 w-[300%] sm:w-[250%] md:w-[150%] lg:w-full h-full bg-no-repeat bg-bottom bg-contain"
         style={{
           backgroundImage: `url(${isommetricGrid})`,
         }}
-      ></div>
+      ></div> */}
       <main className="grow grid place-items-center">
         <div>
           <MiniGallery
@@ -40,13 +40,7 @@ const HomePage = ({ details }) => {
 
           <div className="flex justify-between items-center mt-5 ">
             <div className="flex flex-col gap-2">
-              <div
-                style={{
-                  direction: "ltr",
-                  width: "fit-content",
-                  transform: "scaleX(-1)",
-                }}
-              >
+              <div style={{}}>
                 <Rating rating={selectedBroskie.rating} />
               </div>
               <h1 className="text-4xl font-bold">{selectedBroskie.name}</h1>

@@ -6,6 +6,7 @@ const MiniImage = ({
   src,
   verticalPosition = "center",
   blur = 10,
+  style = {},
   onClick = () => {},
 }) => {
   const [thumbnail, image] = src;
@@ -41,6 +42,7 @@ const MiniImage = ({
         backgroundPosition: verticalPosition,
         filter: `blur(${blur}px)`,
         overflow: "hidden",
+        ...style,
       }}
     >
       <img
@@ -63,6 +65,7 @@ MiniImage.propTypes = {
   src: PropTypes.array.isRequired,
   verticalPosition: PropTypes.string,
   blur: PropTypes.number,
+  style: PropTypes.object,
   onClick: PropTypes.func,
 };
 

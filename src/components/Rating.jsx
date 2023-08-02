@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 import iconsRating from "@icons/rating";
 
-const Rating = ({ rating }) => {
-  if (rating > 5) rating = 5;
+const Rating = ({ rating, size = 20 }) => {
+  if (!rating) rating = 0;
+  else if (rating > 5) rating = 5;
   else if (rating < 0) rating = 0;
 
   const wholeStars = Math.floor(rating);
@@ -15,17 +16,27 @@ const Rating = ({ rating }) => {
     .fill(0)
     .forEach((_, i) => {
       starsArray.push(
-        <img key={i} className="w-5" src={iconsRating.full} alt="Full Star" />
+        <img
+          key={`full-${i}`}
+          src={iconsRating.full}
+          alt="Full Star"
+          style={{
+            width: size,
+          }}
+        />
       );
     });
 
   if (hasHalfStar) {
     starsArray.push(
       <img
-        key="half"
-        className="-scale-x-[1] w-5"
+        key={`half-${wholeStars}`}
+        className="-scale-x-[1]"
         src={iconsRating.half}
         alt="Half Star"
+        style={{
+          width: size,
+        }}
       />
     );
   }
@@ -35,19 +46,33 @@ const Rating = ({ rating }) => {
     .forEach((_, i) => {
       starsArray.push(
         <img
-          key={i}
-          className="w-5"
+          key={`hollow-${i}`}
           src={iconsRating.hollow}
           alt="Hollow Star"
+          style={{
+            width: size,
+          }}
         />
       );
     });
 
-  return <div className="flex gap-1">{starsArray}</div>;
+  return (
+    <div
+      className="flex gap-1"
+      style={{
+        direction: "ltr",
+        width: "fit-content",
+        transform: "scaleX(-1)",
+      }}
+    >
+      {starsArray}
+    </div>
+  );
 };
 
 Rating.propTypes = {
   rating: PropTypes.number.isRequired,
+  size: PropTypes.number,
 };
 
 export default Rating;

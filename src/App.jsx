@@ -15,6 +15,7 @@ function App() {
       date: "25.9.2021",
       tags: ["هيئة التحزيب", "عمود", "SC", "SSSSNOA", "نويبع"],
       rating: 5,
+      points: 113232,
       role: "عمود",
       quote:
         "I choose to feel good. I choose to feel free. I will fight for everything I love forever. And I will love everything that I fight for, forever.",
@@ -56,6 +57,7 @@ function App() {
       date: "25.9.2019",
       tags: ["عبودة الجيهة", "عمود", "شايل انجليزي", "IS IS IS IS"],
       rating: 4.5,
+      points: 45857,
       role: "عمود",
       quote: `فوسط الموت انا بحط اخواتي. فقلب الحتة انا عايش بالسيرة. فقلب النار انا واقف بأخواتي. فكل حتة انا بعلم فيها. فكل حتة انا بعلي الجيهة. فأي حتة انا معلم فيها `,
       face: [
@@ -105,6 +107,7 @@ function App() {
         "نويبع",
       ],
       rating: 5,
+      points: 84717,
       role: "عمود",
       quote:
         "We're nothing, and nothing will help us. Maybe we're lying, then you better not stay. But we could be safer, just for one day.",
@@ -152,6 +155,7 @@ function App() {
         "د. أحمد صلاح",
       ],
       rating: 4.5,
+      points: 8690,
       role: "عضو",
       quote: `أنا ابويا رباني مدير. أنا أبويا رباني مهندس`,
       face: [
@@ -202,6 +206,7 @@ function App() {
         "نويبع",
       ],
       rating: 5,
+      points: 153068,
       role: "عمود",
       quote: `.عشان كل يوم بطقم جديد, فأفتكروني بتاع حشيش. شافوني شوفة خيش. فا حبيت اوضح. شباب شباشب علي مفيش`,
       face: [
@@ -242,6 +247,7 @@ function App() {
       date: "25.9.2021",
       tags: ["هيئة التحزيب", "عمود", "حمأمأ", "IS IS IS IS"],
       rating: 5,
+      points: 92211,
       role: "عمود",
       quote:
         "رزقنا, الرزق على الله. دربنا, خليها على الله, بعشق الدروب و الدروب قلوب. و يهون الله.",
@@ -283,6 +289,7 @@ function App() {
       date: "25.9.2021",
       tags: ["CSYS", "بيكره ياسمين عفيف", "بوردة"],
       rating: 4.5,
+      points: 30105,
       role: "عضو",
       quote:
         "ابيع نفسي لأول مشترِ اتٍ. ابيع نفسي مقهورا حبيباتي كلماتي. فليسقط الشعر و لتنهار ابياتي. فالشعر شعري و المأساة مأساتي.",
@@ -324,6 +331,7 @@ function App() {
       date: "25.9.2021",
       tags: ["SC", "صنم صميم"],
       rating: 1,
+      points: 31,
       role: "صنم",
       quote:
         "اقر انا المذكور اعلاة. ساكن بالعنوان اياة. بان الصبر على صبر. طعم المر فى قلبى فضل. يمرر فية ولا عمرة قدر. يغير حبك من جواة.",
@@ -365,6 +373,7 @@ function App() {
       date: "25.9.2021",
       tags: ["CS", "ReaktJS"],
       rating: 4,
+      points: 17088,
       role: "عضو",
       quote: `"These are the days we won't forget, and we'll be the ones to take the first step." - Imagine Dragons (On Top of the World)`,
       face: [
@@ -405,6 +414,7 @@ function App() {
       date: "25.9.2021",
       tags: ["CS", "المطرية", "العزبة"],
       rating: 3,
+      points: 5387,
       role: "عضو",
       quote: `Through every verse, in joy or strife, we're united by the thread of life.`,
       face: [
@@ -453,6 +463,7 @@ function App() {
         "مات موردوك",
       ],
       rating: 5,
+      points: 62997,
       role: "عمود",
       quote: `Yeah, I think about the end just way too much. But, it's fun to fantasize`,
       face: [
@@ -493,6 +504,7 @@ function App() {
       date: "25.9.2021",
       tags: ["هيئة التحزيب", "عمود", "شايل انجليزي", "IS IS IS IS"],
       rating: 4.5,
+      points: 31341,
       role: "عضو",
       quote:
         "وفي نهاية هذه الرحلة الغريبة جدا خرجنا ببعض الدروس، بعض الجروح والكثير الكثير الكثير من الجلد السميك وهيك شغلات، فشكراً لاستماعكم وشكراً لكل ما حصل",
@@ -534,6 +546,7 @@ function App() {
       date: "25.9.2021",
       tags: ["IS IS IS IS", "Teleperformance"],
       rating: 2.5,
+      points: 0,
       role: "صنم",
       quote:
         "In peace , may you rest. Never ever shoot below the neck, never ever. You a rookie, I'm a vet. That's why I got a Glock, you got a TEC.",
@@ -583,6 +596,7 @@ function App() {
         "صميم صميم صميم",
       ],
       rating: 5,
+      points: 75948,
       role: "عمود",
       quote: `مجنووووون الافريقي مطرقع وفاجر و مطرشم وكل حاجة عايز تقول عليها قولها `,
       face: [
@@ -623,6 +637,7 @@ function App() {
       date: "25.9.2021",
       tags: ["حرفوش", "IS IS IS IS"],
       rating: 2.5,
+      points: 697,
       role: "مستجد",
       quote: "الاحلام مجانا و انا حلمت اكون امير. بقينا ملوك و بننفذ علي كبير",
       face: [
@@ -663,6 +678,7 @@ function App() {
       date: "25.9.2021",
       tags: ["CS", "حازم مصعب", "جيار سابق", "زيد خالد", "عباسية"],
       rating: 4,
+      points: 3774,
       role: "مستجد",
       quote: "I can make your Mondays even better like the weekend.",
       face: [
@@ -703,6 +719,7 @@ function App() {
       date: "25.9.2021",
       tags: ["CSYS", "تعبان"],
       rating: 3.5,
+      points: 4621,
       role: "عضو",
       quote:
         "Sí, sabes que ya llevo un rato mirándote. Tengo que bailar contigo hoy (DY). Vi que tu mirada ya estaba llamándome. Muéstrame el camino que yo voy.",
@@ -744,6 +761,7 @@ function App() {
       date: "25.9.2021",
       tags: ["SC", "شنو", "عمر مرموش pro max", "كريم مازيكا"],
       rating: 3,
+      points: 1465,
       role: "مستجد",
       quote: "I've got a fire in my soul, and I won't let it die",
       face: [
@@ -784,6 +802,7 @@ function App() {
       date: "25.9.2021",
       tags: ["CS", "كاتا", "راجل مظبوط", "بطل العالم"],
       rating: 2.5,
+      points: 0,
       role: "صنم",
       quote: "Believe to achieve",
       face: [
@@ -824,6 +843,7 @@ function App() {
       date: "25.9.2021",
       tags: ["كسر الموبيل", "كفاني", "Cyber"],
       rating: 3.5,
+      points: 22148,
       role: "عضو",
       quote: `الاماني عالية بس الواقع زفت`,
       face: [
@@ -864,6 +884,7 @@ function App() {
       date: "25.9.2021",
       tags: ["CS"],
       rating: 2.5,
+      points: 0,
       role: "صنم",
       quote: "",
       face: [
@@ -904,6 +925,7 @@ function App() {
       date: "25.9.2021",
       tags: ["SC", "لذيذ", "FL studio", "امممممممم"],
       rating: 4.5,
+      points: 60660,
       role: "عضو",
       quote: `المشوار صعب و طوييل و بيمتحن الروح`,
       face: [
@@ -944,6 +966,7 @@ function App() {
       date: "25.9.2021",
       tags: ["IS IS IS IS", "حنكش", "يسو مقطم"],
       rating: 4,
+      points: 10845,
       role: "عضو",
       quote: "كسكس تعيش تاكل قراقيش",
       face: [
@@ -984,6 +1007,7 @@ function App() {
       date: "25.9.2021",
       tags: ["IS IS IS IS", "دولا بولا", "شقة الرابع"],
       rating: 4,
+      points: 6227,
       role: "عضو",
       quote: `I played dumb, but I always knew.`,
       face: [
@@ -1024,6 +1048,7 @@ function App() {
       date: "25.9.2021",
       tags: ["SC", "كتيبة الإعدام", "نسور"],
       rating: 1.5,
+      points: 122,
       role: "مستجد",
       quote: "في السما عالي صعب تكون مكاني مجتش بالسهال مفيش حاجة مجاني",
       face: [
@@ -1064,6 +1089,7 @@ function App() {
       date: "25.9.2021",
       tags: ["IS IS IS IS", "لايحة قديمة", "المطرية"],
       rating: 4,
+      points: 11184,
       role: "عضو",
       quote: "اللي معاه ربنا يمشي علي المايه ",
       face: [
@@ -1104,6 +1130,7 @@ function App() {
       date: "25.9.2021",
       tags: ["SC", "السمعة الطيبة", "عمر خالخ", "نائب مدير القرب (سابقا)"],
       rating: 4.5,
+      points: 47526,
       role: "عضو",
       quote: `لو خلص الفول انا مش مسئول`,
       face: [
@@ -1144,6 +1171,7 @@ function App() {
       date: "25.9.2021",
       tags: ["SC", "جمجوم", "شنش", "لولي", "player"],
       rating: 2,
+      points: 154,
       role: "مستجد",
       quote:
         "Look within, there is nothing outside of yourself that can ever enable you to get any better, stronger, richer or smarter. Everything is within, Seek nothing outside of yourself.",
@@ -1185,6 +1213,7 @@ function App() {
       date: "25.9.2021",
       tags: ["SC (دفعة اصغر)", "روميو", "بشمهندس", "Anthony Fontana", "نويبع"],
       rating: 2.5,
+      points: 248,
       role: "مستجد",
       quote: `كل مرة بتكبر لحالك لازم تحسب حساب اخوك. `,
       face: [
@@ -1235,6 +1264,7 @@ function App() {
         "سوكا",
       ],
       rating: 4.5,
+      points: 24329,
       role: "عضو",
       quote: `My best days are stress days.`,
       face: [
@@ -1275,6 +1305,7 @@ function App() {
       date: "25.9.2021",
       tags: ["IS IS IS IS", "كومبيوتنج", "ماتريكس"],
       rating: 3,
+      points: 2318,
       role: "عضو",
       quote:
         "I've been in a rut, ducked off from the sun. Bit my gun with my black gold gums. I'm no fun, I'm no fun.",
@@ -1318,6 +1349,7 @@ function App() {
       rating: 4,
       role: "عضو",
       quote: "アニメーションが大好きですおよび14歳未満の女の子",
+      points: 25144,
       face: [
         "https://dl.dropboxusercontent.com/scl/fi/yxg8oiu44zb7pdbg9acc4/face-samaan_scaled_down.png?rlkey=f6ff25hso8gcooy5z174yg2w2&dl=0",
         "https://dl.dropboxusercontent.com/scl/fi/ejonw0hd206km6ioaaw71/face-samaan.png?rlkey=yk9e9p8ykkz8r1e75ax8wcnvi&dl=0",
@@ -1356,6 +1388,7 @@ function App() {
       date: "25.9.2021",
       tags: ["SC (دفعة اصغر)", "شرفي"],
       rating: 2.5,
+      points: 0,
       role: "مستجد",
       quote:
         "ما لقيت ناسي..ما لقيت أهليما لقيت راحة           ما لقيت فرحة..ما لقيت طريقي، ما لقيت رفيقي",
@@ -1404,16 +1437,30 @@ function App() {
     };
   });
 
+  const leaderboardDetails = details.map((member) => {
+    return {
+      name: member.name,
+      rating: member.rating,
+      points: member.points,
+      face: member.face,
+    };
+  });
+
   return (
     <div className="relative App flex">
       <SideDrawer className="fixed z-10 py-8 bg-[#333333] h-[100vh]" />
 
-      <div className="relative wrapper grow mr-[130px]">
+      <div className="relative wrapper h-[100vh] grow mr-[130px]">
         <Routes>
           <Route path="/" element={<HomePage details={details} />} />
           <Route path="/members" element={<MembersPage members={members} />} />
           <Route path="/gallery" element={<GalleryPage />} />
-          <Route path="/leaderboard" element={<LeaderboardPage />} />
+          <Route
+            path="/leaderboard"
+            element={
+              <LeaderboardPage leaderboardDetails={leaderboardDetails} />
+            }
+          />
         </Routes>
       </div>
     </div>
