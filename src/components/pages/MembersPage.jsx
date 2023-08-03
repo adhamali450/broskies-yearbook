@@ -2,15 +2,11 @@ import PropTypes from "prop-types";
 import membersIcons from "@icons/members";
 import MiniImage from "@components/MiniImage";
 // import { NavLink } from "react-router-dom";
-
+import './Members.scss';
 const MembersGrid = ({ members }) => {
   return (
-    <div
-      className="grid gap-8 p-8"
-      style={{
-        gridTemplateColumns: "repeat(auto-fill, minmax(100px, 1fr))",
-      }}
-    >
+    
+    <div className="class">
       {members.map((member, index) => (
         <div
           className="realtive flex flex-col justify-center text-center items-center w-fit"
@@ -30,18 +26,20 @@ const MembersGrid = ({ members }) => {
 
 const Header = ({ title, icon }) => {
   return (
-    <div className="flex gap-2 items-center">
-      <img className="w-10 h-10" src={icon} alt={title} />
-      <h1 className="text-2xl font-semibold text-[#FFD600]">{title}</h1>
+    <div className="flex gap-2 items-center mr-5">
+            <img className="w-10 h-10" src={icon} alt={title} />
+      <h1 className="text-2xl font-semibold text-[#ffffff] ">{title}</h1>
     </div>
   );
 };
 
 const MembersPage = ({ members }) => {
   return (
-    <div className="relative container h-full flex flex-col">
-      <div className="-z-10 absolute bg-[#FFAEDF] w-[40%] h-[40%] translate-x-1/2 right-0 rounded-[100%] blur-3xl opacity-20"></div>
-      <div className="py-8 px-6">
+    <div className="relative container h-full flex flex-col "  >
+{/*            <div className="-z-10  absolute bg-[#0d667f]  w-[30%] h-[35%]  bottom-40  rounded-[90%] blur-3xl opacity-10 " ></div>
+ */}      <div className="-z-10  absolute bg-[#bbc0167a]  w-[35%] h-[60%] translate-x-1/2 right-40  rounded-[90%] blur-3xl opacity-20 " ></div>
+      {/* <span className="absolute inline-block w-[2px] h-full bg-[#FFD600] right-7"></span> */}
+      <div className="py-8 mr-[21px] w-full">
         <Header title="أعمداء" icon={membersIcons.column} />
         <MembersGrid members={members.filter((m) => m.role === "عمود")} />
         <Header title="أعضاء" icon={membersIcons.members} />
@@ -54,7 +52,6 @@ const MembersPage = ({ members }) => {
     </div>
   );
 };
-
 MembersGrid.propTypes = {
   members: PropTypes.array.isRequired,
 };

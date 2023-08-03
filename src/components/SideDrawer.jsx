@@ -4,7 +4,7 @@ import drawerIcons from "@icons/drawer";
 import { NavLink } from "react-router-dom";
 
 // TODO: logo
-// import logo from "../assets/icons/drawer/Frame55.svg";
+ import logo from "../assets/icons/drawer/Frame55.svg";
 const SideDrawer = ({ className = "" }) => {
   const links = [
     {
@@ -35,6 +35,7 @@ const SideDrawer = ({ className = "" }) => {
   return (
     <aside className={`${className}`}>
       <ul className="flex flex-row md:flex-col">
+        <img src={logo} alt="" /><br /><br /><br />
         {links.map((nav, index) => (
           <NavLink
             key={index}
