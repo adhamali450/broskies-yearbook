@@ -45,7 +45,7 @@ const BroskiesBrowser = ({ className, broskies, onBroskieChanged }) => {
       {broskies.map((broskie) => (
         <button
           key={broskie.id}
-          className="w-[54px] h-[54px] rounded-lg overflow-hidden"
+          className="w-[45px] h-[45px] md:w-[54px] md:h-[54px] rounded-lg overflow-hidden"
           style={{
             opacity: selectedId == broskie.id ? 1 : 0.5,
             border:

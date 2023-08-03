@@ -2,27 +2,20 @@ import { memo } from "react";
 import PropTypes from "prop-types";
 import MiniImage from "@components/MiniImage";
 import Badges from "@components/Badges";
+import { imageClickedHandler } from "@/utils";
 
-const MiniGallery = ({ src, onImageSelected, tags }) => {
-  const imageClickedHandler = (img) => {
-    const arr = src.map((pair) => pair[1]);
-    const index = arr.indexOf(img);
-
-    arr.splice(index, 1);
-    arr.unshift(img);
-
-    onImageSelected(arr);
-  };
-
+const MiniGallery = ({ className = "", src, onImageSelected, tags }) => {
   return (
-    <div className="img-grid grid-cols-[500px_250px_250px] grid-rows-[450px]">
+    <div
+      className={`${className} img-grid grid-cols-[400px_200px_200px] xl:grid-cols-[500px_250px_250px] grid-rows-[450px]`}
+    >
       <div className="relative col-start-1">
         <div className="relative w-full h-full rounded-xl overflow-hidden">
           <MiniImage
             className="w-full h-full  z-10 rounded-xl cursor-zoom-in"
             src={src[0].slice(0, 2)}
             verticalPosition={src[0][2]}
-            onClick={imageClickedHandler}
+            onClick={(img) => imageClickedHandler(src, img, onImageSelected)}
             blur={6}
           />
 
@@ -78,6 +71,7 @@ const MiniGallery = ({ src, onImageSelected, tags }) => {
 };
 
 MiniGallery.propTypes = {
+  className: PropTypes.string,
   src: PropTypes.array.isRequired,
   onImageSelected: PropTypes.func.isRequired,
   tags: PropTypes.array,

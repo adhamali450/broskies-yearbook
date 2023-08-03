@@ -35,4 +35,14 @@ const arNum = (number) => {
   return String(number).replace(/\d/g, (digit) => arabicNumbers[digit]);
 };
 
-export { rangedRandom, rangedRandomInt, getLang, arNum };
+const imageClickedHandler = (src, img, callback) => {
+  const arr = src.map((pair) => pair[1]);
+  const index = arr.indexOf(img);
+
+  arr.splice(index, 1);
+  arr.unshift(img);
+
+  callback(arr);
+};
+
+export { rangedRandom, rangedRandomInt, getLang, arNum, imageClickedHandler };
