@@ -34,7 +34,7 @@ const SideDrawer = ({ className = "" }) => {
   ];
   return (
     <aside className={`${className}`}>
-      <ul className="flex flex-col">
+      <ul className="flex flex-row md:flex-col">
         {links.map((nav, index) => (
           <NavLink
             key={index}
@@ -42,9 +42,9 @@ const SideDrawer = ({ className = "" }) => {
             className={`nav-btn`}
             activeclassname="active"
           >
-            <img src={nav.icon} alt={nav.text} />
+            <img className="w-8 xmd:w-12" src={nav.icon} alt={nav.text} />
             <span
-              className="text-sm font-semibold w-max"
+              className="text-sm font-semibold w-min text-center xmd:w-max hidden md:inline"
               style={{ color: nav.color }}
             >
               {nav.text}

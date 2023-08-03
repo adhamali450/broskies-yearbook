@@ -4,7 +4,16 @@
 @tailwind components
 @tailwind utilities
 
+html
+    overflow: hidden
+    width: 100%
+
 body
+    height: 100%
+    position: fixed
+    overflow-y: scroll
+    -webkit-overflow-scrolling: touch
+
     font-family: 'Rubik', sans-serif
     @apply bg-[#0C0C0C] text-white
 
@@ -42,7 +51,7 @@ body
     background-color: #a7a7a7
 
 .nav-btn
-    @apply w-full px-6 py-6 flex flex-col items-center gap-1 hover:bg-[#232323] active:bg-[#191919] transition-colors
+    @apply w-full md:px-6 py-4 md:py-6 flex flex-col items-center gap-1 hover:bg-[#232323] active:bg-[#191919] transition-colors
 
 .nav-btn.active
     @apply bg-[#191919]

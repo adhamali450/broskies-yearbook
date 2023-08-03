@@ -164,12 +164,12 @@ function App() {
       ],
       images: [
         [
-          "https://dl.dropboxusercontent.com/scl/fi/slw2y5c728ge72tbj7k3g/bassel-1_compressed_scaled_down.jpeg?rlkey=pdcfm5gvltmh37ya15mjwrbi9&dl=0",
+          "https://dl.dropboxusercontent.com/scl/fi/m7o22cji6jf5u74o9o6wf/bassel-2_scaled_down.jpeg?rlkey=ti85ws9tmwu0a0rj39x5gqyfv&dl=0",
           "https://dl.dropboxusercontent.com/scl/fi/7jiose2o2mhu9xhtnr1kb/bassel-2.jpeg?rlkey=22kbxd3oavra1sdczmbnrgn1k&dl=0",
           "center",
         ],
         [
-          "https://dl.dropboxusercontent.com/scl/fi/m7o22cji6jf5u74o9o6wf/bassel-2_scaled_down.jpeg?rlkey=ti85ws9tmwu0a0rj39x5gqyfv&dl=0",
+          "https://dl.dropboxusercontent.com/scl/fi/slw2y5c728ge72tbj7k3g/bassel-1_compressed_scaled_down.jpeg?rlkey=pdcfm5gvltmh37ya15mjwrbi9&dl=0",
           "https://dl.dropboxusercontent.com/scl/fi/dvz0600ubtzjdmdowuzqf/bassel-alt.jpg?rlkey=f5serhe7sv168s3ym15c0yt76&dl=0",
           "center",
         ],
@@ -1447,10 +1447,10 @@ function App() {
   });
 
   return (
-    <div className="relative App flex">
-      <SideDrawer className="fixed z-10 py-8 bg-[#333333] h-[100vh]" />
+    <div className="relative App flex flex-col md:flex-row">
+      <SideDrawer className="fixed z-50 md:py-8 bg-[#333333] w-[100vw] h-auto md:w-auto md:h-[100vh]" />
 
-      <div className="relative wrapper h-[100vh] grow mr-[130px]">
+      <div className="relative wrapper h-[calc(100vh-64px)] md:h-[100vh] grow mt-[64px] md:mt-0 md:mr-[95px] xmd:mr-[130px]">
         <Routes>
           <Route path="/" element={<HomePage details={details} />} />
           <Route path="/members" element={<MembersPage members={members} />} />

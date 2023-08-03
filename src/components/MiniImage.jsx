@@ -5,11 +5,11 @@ const MiniImage = ({
   className = "",
   src,
   verticalPosition = "center",
-  blur = 10,
+  blur = 3,
   style = {},
   onClick = () => {},
 }) => {
-  const [thumbnail, image] = src;
+  let [thumbnail, image] = src;
 
   const containerRef = useRef(null);
   useEffect(() => {
@@ -29,33 +29,35 @@ const MiniImage = ({
     const img = containerRef.current.querySelector("img");
 
     img.style.opacity = 0;
+    containerRef.current.style.filter = `blur(${blur}px)`;
   }, [src]);
 
   return (
-    <div
-      ref={containerRef}
-      className={`${className} relative bg-no-repeat`}
-      onClick={() => onClick(src)}
-      style={{
-        backgroundSize: "cover",
-        backgroundImage: `url('${thumbnail}')`,
-        backgroundPosition: verticalPosition,
-        filter: `blur(${blur}px)`,
-        overflow: "hidden",
-        ...style,
-      }}
-    >
-      <img
-        className="w-full h-full"
-        src={image}
-        alt=""
+    <div className={`${className} relative overflow-hidden`} style={style}>
+      <div
+        ref={containerRef}
+        className={`bg-no-repeat w-full h-full`}
+        onClick={() => onClick(src[1])}
         style={{
-          opacity: 0,
-          transition: "opacity 0.15s ease-in-out",
-          objectFit: "cover",
-          objectPosition: verticalPosition,
+          backgroundSize: "cover",
+          backgroundImage: `url('${thumbnail}')`,
+          backgroundPosition: verticalPosition,
+          filter: `blur(${blur}px)`,
+          overflow: "hidden",
         }}
-      />
+      >
+        <img
+          className="w-full h-full"
+          src={image}
+          alt=""
+          style={{
+            opacity: 0,
+            transition: "opacity 0.15s ease-in-out",
+            objectFit: "cover",
+            objectPosition: verticalPosition,
+          }}
+        />
+      </div>
     </div>
   );
 };

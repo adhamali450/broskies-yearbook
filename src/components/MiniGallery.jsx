@@ -1,25 +1,26 @@
+import { memo } from "react";
 import PropTypes from "prop-types";
 import MiniImage from "@components/MiniImage";
 import Badges from "@components/Badges";
+import { imageClickedHandler } from "@/utils";
 
-const MiniGallery = ({ src, onImageSelected, tags }) => {
-  const imageClickedHandler = (img) => {
-    onImageSelected(img);
-  };
-
+const MiniGallery = ({ className = "", src, onImageSelected, tags }) => {
   return (
-    <div className="img-grid grid-cols-[500px_250px_250px] grid-rows-[450px]">
+    <div
+      className={`${className} img-grid grid-cols-[400px_200px_200px] xl:grid-cols-[500px_250px_250px] grid-rows-[450px]`}
+    >
       <div className="relative col-start-1">
         <div className="relative w-full h-full rounded-xl overflow-hidden">
           <MiniImage
             className="w-full h-full  z-10 rounded-xl cursor-zoom-in"
             src={src[0].slice(0, 2)}
             verticalPosition={src[0][2]}
-            onClick={imageClickedHandler}
+            onClick={(img) => imageClickedHandler(src, img, onImageSelected)}
+            blur={6}
           />
 
           {tags && (
-            <div className="z-20 absolute inset-0 bg-gradient-to-t from-rgba-black-0.8 via-transparent to-transparent p-5 flex items-end">
+            <div className="z-20 absolute inset-0 bg-gradient-to-t from-rgba-black-0.8 via-transparent to-transparent p-5 flex items-end pointer-events-none">
               <Badges
                 className="max-w-[400px] flex flex-wrap gap-1"
                 tags={tags}
@@ -37,12 +38,14 @@ const MiniGallery = ({ src, onImageSelected, tags }) => {
           src={src[1].slice(0, 2)}
           verticalPosition={src[1][2]}
           onClick={imageClickedHandler}
+          blur={6}
         />
         <MiniImage
           className="z-10 rounded-xl cursor-zoom-in"
           src={src[2].slice(0, 2)}
           verticalPosition={src[2][2]}
           onClick={imageClickedHandler}
+          blur={6}
         />
       </div>
       <div className="relative col-start-3 img-grid grid-rows-[2fr_1fr]">
@@ -53,12 +56,14 @@ const MiniGallery = ({ src, onImageSelected, tags }) => {
           src={src[3].slice(0, 2)}
           verticalPosition={src[3][2]}
           onClick={imageClickedHandler}
+          blur={6}
         />
         <MiniImage
           className="z-10 rounded-xl cursor-zoom-in"
           src={src[4].slice(0, 2)}
           verticalPosition={src[4][2]}
           onClick={imageClickedHandler}
+          blur={6}
         />
       </div>
     </div>
@@ -66,9 +71,14 @@ const MiniGallery = ({ src, onImageSelected, tags }) => {
 };
 
 MiniGallery.propTypes = {
+  className: PropTypes.string,
   src: PropTypes.array.isRequired,
   onImageSelected: PropTypes.func.isRequired,
   tags: PropTypes.array,
 };
 
-export default MiniGallery;
+const memomized = memo(MiniGallery, (prev, next) =>
+  prev.src.every((src, i) => src[0] === next.src[i][0])
+);
+
+export default memomized;
