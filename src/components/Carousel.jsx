@@ -50,6 +50,7 @@ const Carousel = ({ className = "", src, memberDetails, onImageSelected }) => {
         verticalPosition={src[selectedIndex][2]}
         onClick={(img) => imageClickedHandler(src, img, onImageSelected)}
         blur={6}
+        forceWithinBounds
       />
 
       {/* Details */}

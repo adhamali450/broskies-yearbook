@@ -8,6 +8,7 @@ const MiniImage = ({
   blur = 3,
   style = {},
   onClick = () => {},
+  forceWithinBounds = false,
 }) => {
   let [thumbnail, image] = src;
 
@@ -55,8 +56,8 @@ const MiniImage = ({
           style={{
             opacity: 0,
             transition: "opacity 0.15s ease-in-out",
-            objectFit: "contain",
-            objectPosition: "center",
+            objectFit: forceWithinBounds ? "contain" : "cover",
+            objectPosition: forceWithinBounds ? "center" : verticalPosition,
           }}
           loading="lazy"
         />
