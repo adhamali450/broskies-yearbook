@@ -37,14 +37,14 @@ const MiniGallery = ({ className = "", src, onImageSelected, tags }) => {
           className="z-10 rounded-xl cursor-zoom-in"
           src={src[1].slice(0, 2)}
           verticalPosition={src[1][2]}
-          onClick={imageClickedHandler}
+          onClick={(img) => imageClickedHandler(src, img, onImageSelected)}
           blur={6}
         />
         <MiniImage
           className="z-10 rounded-xl cursor-zoom-in"
           src={src[2].slice(0, 2)}
           verticalPosition={src[2][2]}
-          onClick={imageClickedHandler}
+          onClick={(img) => imageClickedHandler(src, img, onImageSelected)}
           blur={6}
         />
       </div>
@@ -55,14 +55,14 @@ const MiniGallery = ({ className = "", src, onImageSelected, tags }) => {
           className="z-10 rounded-xl cursor-zoom-in"
           src={src[3].slice(0, 2)}
           verticalPosition={src[3][2]}
-          onClick={imageClickedHandler}
+          onClick={(img) => imageClickedHandler(src, img, onImageSelected)}
           blur={6}
         />
         <MiniImage
           className="z-10 rounded-xl cursor-zoom-in"
           src={src[4].slice(0, 2)}
           verticalPosition={src[4][2]}
-          onClick={imageClickedHandler}
+          onClick={(img) => imageClickedHandler(src, img, onImageSelected)}
           blur={6}
         />
       </div>
