@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import iconsRating from "@icons/rating";
 
-const Rating = ({ rating, size = 20 }) => {
+const Rating = ({ className = "", rating, size = 20 }) => {
   if (!rating) rating = 0;
   else if (rating > 5) rating = 5;
   else if (rating < 0) rating = 0;

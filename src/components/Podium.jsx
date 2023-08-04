@@ -15,7 +15,7 @@ const Podium = ({ className, winners, colors }) => {
             className={styles["mini-img"]}
             src={winners[2].face}
             style={{
-              border: `5px solid ${colors[2]}`,
+              borderColor: `${colors[2]}`,
             }}
           />
           <span
@@ -41,12 +41,12 @@ const Podium = ({ className, winners, colors }) => {
       </div>
       <div className={styles["pos-1st"]}>
         <div className={styles["img-container"]}>
-          <img className="w-14 -mb-1" src={iconCrown} alt="Crown" />
+          <img className="w-12 md:w-14 -mb-1" src={iconCrown} alt="Crown" />
           <MiniImage
             className={styles["mini-img"]}
             src={winners[0].face}
             style={{
-              border: `5px solid ${colors[0]}`,
+              borderColor: `${colors[0]}`,
             }}
           />
           <span
@@ -76,7 +76,7 @@ const Podium = ({ className, winners, colors }) => {
             className={styles["mini-img"]}
             src={winners[1].face}
             style={{
-              border: `5px solid ${colors[1]}`,
+              borderColor: `${colors[1]}`,
             }}
           />
           <span

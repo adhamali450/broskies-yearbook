@@ -21,13 +21,13 @@
         .img-container
             @apply relative flex flex-col items-center
             .mini-img
-                @apply w-[100px] h-[100px] rounded-full
+                @apply w-[80px] h-[80px] xs:w-[85px] xs:h-[85px] md:w-[100px] md:h-[100px] border-[3.5px] md:border-[5px] border-solid rounded-full
             .rank
-                @apply absolute inline-block font-black rounded-full px-2 -translate-x-1/2 left-1/2 -bottom-3
+                @apply absolute inline-block font-black rounded-full px-2 -translate-x-1/2 left-1/2 -bottom-3 z-[3]
         .name
-            @apply mt-5
+            @apply mt-5 px-2 text-center
         .points
-            @apply font-black rounded-xl px-2 mt-2 mb-4
+            @apply font-black rounded-xl px-2 mt-3 mb-4
     .pos-3rd
         @extend .pos
         @apply row-start-2 row-span-2 col-start-1
