@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { useRef, useEffect } from "react";
 
+//TODO: refactor for eslint
 const MiniImage = ({
   className = "",
   src,
