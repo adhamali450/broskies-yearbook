@@ -1,14 +1,12 @@
 import PropTypes from "prop-types";
 import { useRef, useEffect } from "react";
 
-//TODO: refactor for eslint
 const MiniImage = ({
   className = "",
   src,
   verticalPosition = "center",
   blur = 3,
   style = {},
-  forceWithinBounds = true,
   onClick = () => {},
 }) => {
   let [thumbnail, image] = src;
@@ -17,10 +15,8 @@ const MiniImage = ({
   useEffect(() => {
     if (!containerRef.current) return;
 
-    const container = containerRef.current;
     const img = containerRef.current.querySelector("img");
     img.onload = () => {
-      // container.style.filter = "blur(0px)";
       img.style.opacity = 1;
     };
   }, [containerRef]);
@@ -31,7 +27,6 @@ const MiniImage = ({
     const img = containerRef.current.querySelector("img");
 
     img.style.opacity = 0;
-    // containerRef.current.style.filter = `blur(${blur}px)`;
   }, [src]);
 
   return (
@@ -61,9 +56,9 @@ const MiniImage = ({
             opacity: 0,
             transition: "opacity 0.15s ease-in-out",
             objectFit: "contain",
-            // objectPosition: verticalPosition,
             objectPosition: "center",
           }}
+          loading="lazy"
         />
       </div>
     </div>

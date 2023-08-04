@@ -13,7 +13,7 @@ const LeaderboardPage = ({ leaderboardDetails }) => {
 
   return (
     <div className="relative h-full md:px-8 py-8 ">
-      <span className="fixed inline-block w-1/3 h-full -translate-x-1/2 left-1/2 rounded-full bg-[#0109D3] opacity-[0.7] blur-[500px]"></span>
+      <span className="fixed inline-block w-1/3 h-full -translate-x-1/2 left-1/2 rounded-full bg-[#0109D3] opacity-[0.7] blur-[250px] md:blur-[300px] lg:blur-[500px]"></span>
       <Podium
         className="w-[90%] sm:w-2/3 lg:w-1/2  mx-auto "
         winners={topThree}
