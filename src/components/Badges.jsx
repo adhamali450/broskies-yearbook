@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 
 const Badges = ({ tags, className = "" }) => {
+  tags = tags.sort((a, b) => a.length - b.length);
+
   const colors = [
     "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300",
     "bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-300",

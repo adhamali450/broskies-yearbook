@@ -1,4 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import useOnBackButton from "@hooks/useOnBackButton";
+
 import Rating from "@components/Rating";
 import BroskiesBrowser from "@components/BroskiesBrowser";
 import MiniGallery from "@components/MiniGallery";
@@ -6,6 +8,7 @@ import Carousel from "@components/Carousel";
 import useWindowWidth from "@hooks/useWindowWidth";
 import Lightbox from "yet-another-react-lightbox";
 import Download from "yet-another-react-lightbox/plugins/download";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
 
 import PropTypes from "prop-types";
@@ -25,9 +28,10 @@ const HomePage = ({ details }) => {
     setSelectedBroskie(details.find((d) => d.id === id));
   };
 
-  useEffect(() => {
-    window.scrollTo(0, 1);
-  }, []);
+  // Close modal on back button
+  useOnBackButton(() => {
+    setLightboxSrcset(undefined);
+  });
 
   return (
     <div className="container w-[90%] mx-auto h-full flex flex-col items-center">
@@ -98,7 +102,7 @@ const HomePage = ({ details }) => {
           downloadFilename: img.split("/").pop() + ".jpg",
         }))}
         controller={{ closeOnPullDown: true, closeOnBackdropClick: true }}
-        plugins={[Download]}
+        plugins={[Download, Zoom]}
         className="ltr"
       />
     </div>
