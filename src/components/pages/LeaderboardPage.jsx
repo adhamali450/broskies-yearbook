@@ -3,7 +3,6 @@ import Rating from "@components/Rating";
 import Podium from "@components/Podium";
 import styles from "@pages/LeaderboardPage.module.sass";
 import PropTypes from "prop-types";
-import './Leaderboard.css'
 import { arNum } from "@/utils";
 
 const LeaderboardPage = ({ leaderboardDetails }) => {

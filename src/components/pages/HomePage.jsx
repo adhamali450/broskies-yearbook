@@ -30,7 +30,7 @@ const HomePage = ({ details }) => {
   }, []);
 
   return (
-    <div className="container w-[90%] mx-auto h-[100%] flex flex-col items-center">
+    <div className="container w-[90%] mx-auto bg-red-500 h-full flex flex-col items-center">
       {/* <div
         className="absolute -z-10 opacity-50 -translate-x-1/2 left-1/2 bottom-0 w-[300%] sm:w-[250%] md:w-[150%] lg:w-full h-full bg-no-repeat bg-bottom bg-contain"
         style={{
@@ -51,6 +51,7 @@ const HomePage = ({ details }) => {
               />
             ) : (
               <Carousel
+                className="h-[70vh]"
                 src={selectedBroskie.images}
                 memberDetails={selectedBroskie}
                 onImageSelected={(srcset) => {

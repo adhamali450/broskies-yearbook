@@ -3,8 +3,7 @@ import PropTypes from "prop-types";
 import drawerIcons from "@icons/drawer";
 import { NavLink } from "react-router-dom";
 
-// TODO: logo
- import logo from "../assets/icons/drawer/Frame55.svg";
+import logo from "@assets/logo.svg";
 const SideDrawer = ({ className = "" }) => {
   const links = [
     {
@@ -33,9 +32,15 @@ const SideDrawer = ({ className = "" }) => {
     },
   ];
   return (
-    <aside className={`${className}`}>
-      <ul className="flex flex-row md:flex-col">
-        <img src={logo} alt="" /><br /><br /><br />
+    <aside
+      className={`${className} flex md:flex-col gap-0 xmd:gap-6 items-center`}
+    >
+      <img
+        className="w-[100px] xmd:w-[140px] p-2 xmd:p-0 "
+        src={logo}
+        alt="حمامة شيراتون"
+      />
+      <ul className="flex flex-row md:flex-col grow h-full w-full md:h-auto">
         {links.map((nav, index) => (
           <NavLink
             key={index}

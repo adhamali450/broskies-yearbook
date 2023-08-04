@@ -1,4 +1,4 @@
-import { useState, memo } from "react";
+import { useState, memo, useEffect } from "react";
 import MiniImage from "@components/MiniImage";
 import Rating from "@components/Rating";
 import Badges from "@components/Badges";
@@ -19,6 +19,11 @@ const Carousel = ({ className = "", src, memberDetails, onImageSelected }) => {
       setSelectedIndex((prev) => (prev - 1 + src.length) % src.length);
     }
   };
+
+  useEffect(() => {
+    setSelectedIndex(0);
+  }, [src]);
+
   return (
     <div
       className={`${className} relative w-[100%] md:w-[80%] xmd:w-[60%] h-[100%] mx-auto rounded-xl overflow-hidden`}

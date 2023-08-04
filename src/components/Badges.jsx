@@ -17,7 +17,7 @@ const Badges = ({ tags, className = "" }) => {
       {tags?.map((tag, i) => (
         <span
           key={i}
-          className={`text-sm font-medium px-2.5 py-0.5 rounded ${
+          className={`text-xs sm:text-sm font-medium px-2.5 py-0.5 rounded ${
             colors[i % colors.length]
           }`}
         >

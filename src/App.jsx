@@ -1450,7 +1450,7 @@ function App() {
     <div className="relative App flex flex-col md:flex-row">
       <SideDrawer className="fixed z-50 md:py-8 bg-[#3333338a] w-[100vw] h-auto md:w-auto md:h-[100vh]" />
 
-      <div className="relative wrapper h-[calc(100vh-64px)] md:h-[100vh] grow mt-[64px] md:mt-0 md:mr-[95px] xmd:mr-[130px]">
+      <div className="relative wrapper h-[calc(100vh-64px)] md:h-[100vh] mt-[64px] md:mt-0 md:mr-[95px] xmd:mr-[130px]">
         <Routes>
           <Route path="/" element={<HomePage details={details} />} />
           <Route path="/members" element={<MembersPage members={members} />} />
