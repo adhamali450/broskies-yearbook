@@ -8,16 +8,13 @@ const MembersGrid = ({ members }) => {
   return (
     <div className={styles["members-grid"]}>
       {members.map((member, index) => (
-        <div
-          className="realtive flex flex-col justify-center text-center items-center w-fit"
-          key={index}
-        >
+        <div className={styles["member-container"]} key={index}>
           <MiniImage
-            className="w-[100px] h-[100px] rounded-xl"
+            className={styles["mini-img"]}
             src={member.face}
             verticlPosition="center"
           />
-          <h1 className="text-sm mt-2">{member.name}</h1>
+          <h3 className="text-sm mt-2">{member.name}</h3>
         </div>
       ))}
     </div>
@@ -27,8 +24,8 @@ const MembersGrid = ({ members }) => {
 const Header = ({ className, title, icon }) => {
   return (
     <div className={`${className} ${styles["header"]} flex gap-2 items-center`}>
-      <img className="w-10 h-10" src={icon} alt={title} />
-      <h1 className="text-2xl font-semibold text-[#ffffff] ">{title}</h1>
+      <img src={icon} alt={title} />
+      <h1>{title}</h1>
     </div>
   );
 };
@@ -36,9 +33,9 @@ const Header = ({ className, title, icon }) => {
 const MembersPage = ({ members }) => {
   return (
     <div className="relative h-full flex flex-col ">
-      <div className="-z-10  absolute bg-[#bbc0167a]  w-[35%] h-[60%] translate-x-1/2 right-40  rounded-[90%] blur-3xl opacity-20 "></div>
+      <div className="-z-10 absolute bg-[#bbc0167a] w-[35%] h-[60%] translate-x-1/2 right-40  rounded-[90%] blur-3xl opacity-20 "></div>
 
-      <div className="p-8 w-full">
+      <div className="p-4 md:p-6 lg:p-8 w-full">
         <Header title="أعمداء" icon={membersIcons.column} />
         <MembersGrid members={members.filter((m) => m.role === "عمود")} />
         <Header title="أعضاء" icon={membersIcons.members} />

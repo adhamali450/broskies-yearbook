@@ -1,16 +1,8 @@
 .members-grid
-  display: flex
-  width: 100%
-  position: relative
-
   $border: 2px
-  background: #0C0C0C
-  background-clip: padding-box
   border: solid $border transparent
-  border-radius: 1em
-  padding: 2rem
-  flex-wrap: wrap
-  gap: 2rem
+
+  @apply flex w-full relative bg-[#0C0C0C] bg-clip-padding p-4 md:p-6 lg:p-8 flex-wrap gap-4 md:gap-6 lg:gap-8 rounded-2xl
 
   &:before
     content: ''
@@ -24,7 +16,17 @@
     border-radius: inherit
     background: linear-gradient(to right , rgba(136, 115, 109, 0), orange)
 
+  .member-container
+    @apply relative flex flex-col justify-center text-center items-center w-fit
+    h3
+      overflow-wrap: break-words
+    .mini-img
+      @apply w-[75px] h-[75px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px] rounded-xl
 .header
-  margin-bottom: 1rem
+  @apply mb-4
   &:not(:first-child)
-    margin-top: 2rem
+    @apply mt-8
+  img
+    @apply w-8 h-8 md:w-10 md:h-10
+  h1
+    @apply text-xl md:text-2xl font-semibold text-[#ffffff]
