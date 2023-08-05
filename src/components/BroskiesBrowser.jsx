@@ -10,25 +10,6 @@ const BroskiesBrowser = ({ className, broskies, onBroskieChanged }) => {
     containerRefs.current = containerRefs.current.slice(0, broskies.length);
   }, [broskies]);
 
-  // useEffect(() => {
-  //   const handleArrows = (e) => {
-  //     if (e.key === "ArrowRight") {
-  //       broskieChangedHandler(selectedId - 1);
-  //     } else if (e.key === "ArrowLeft") {
-  //       broskieChangedHandler(selectedId + 1);
-  //     }
-  //   };
-  //   document.addEventListener("keydown", (e) => {
-  //     // handleArrows(e);
-  //   });
-
-  //   return () => {
-  //     document.removeEventListener("keydown", (e) => {
-  //       // handleArrows(e);
-  //     });
-  //   };
-  // }, []);
-
   const broskieChangedHandler = (id) => {
     setSelectedId(id);
     onBroskieChanged(id);
@@ -45,7 +26,7 @@ const BroskiesBrowser = ({ className, broskies, onBroskieChanged }) => {
       {broskies.map((broskie) => (
         <button
           key={broskie.id}
-          className="w-[45px] h-[45px] md:w-[54px] md:h-[54px] rounded-lg overflow-auto"
+          className="w-[45px] h-[45px] md:w-[54px] md:h-[54px] rounded-md overflow-hidden"
           style={{
             opacity: selectedId == broskie.id ? 1 : 0.5,
             border:
@@ -58,7 +39,7 @@ const BroskiesBrowser = ({ className, broskies, onBroskieChanged }) => {
           onClick={() => broskieChangedHandler(broskie.id)}
         >
           <MiniImage
-            className="w-full h-full "
+            className="w-full h-full"
             src={broskie.face}
             verticlPosition="center"
             blur={3}
