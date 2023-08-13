@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 const MiniImage = ({
   className = "",
@@ -9,10 +10,19 @@ const MiniImage = ({
   style = {},
   onClick = () => {},
   forceWithinBounds = false,
+  lazyLoaded = false,
 }) => {
-  let [thumbnail, image] = src;
-
   const containerRef = useRef(null);
+  const { ref, inView } = useInView({
+    /* Optional options */
+    threshold: 0,
+  });
+
+  const [loadedSrc, setLoadedSrc] = useState("");
+  useEffect(() => {
+    if (lazyLoaded && inView && !loadedSrc) setLoadedSrc(src[1]);
+  }, [inView]);
+
   useEffect(() => {
     if (!containerRef.current) return;
 
@@ -38,7 +48,7 @@ const MiniImage = ({
         onClick={() => onClick(src[1])}
         style={{
           backgroundSize: "cover",
-          backgroundImage: `url('${thumbnail}')`,
+          backgroundImage: `url('${src[0]}')`,
           backgroundPosition: verticalPosition,
           overflow: "hidden",
         }}
@@ -49,9 +59,11 @@ const MiniImage = ({
             backdropFilter: `blur(${blur}px)`,
           }}
         ></div>
+
         <img
+          ref={ref}
           className="relative z-[3] w-full h-full"
-          src={image}
+          src={lazyLoaded ? loadedSrc : src[1]}
           alt=""
           style={{
             opacity: 0,
@@ -59,7 +71,6 @@ const MiniImage = ({
             objectFit: forceWithinBounds ? "contain" : "cover",
             objectPosition: forceWithinBounds ? "center" : verticalPosition,
           }}
-          loading="lazy"
         />
       </div>
     </div>
@@ -72,8 +83,9 @@ MiniImage.propTypes = {
   verticalPosition: PropTypes.string,
   blur: PropTypes.number,
   style: PropTypes.object,
-  forceWithinBounds: PropTypes.bool,
   onClick: PropTypes.func,
+  forceWithinBounds: PropTypes.bool,
+  lazyLoaded: PropTypes.bool,
 };
 
 export default MiniImage;

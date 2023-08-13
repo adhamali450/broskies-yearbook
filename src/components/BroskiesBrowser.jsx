@@ -43,6 +43,7 @@ const BroskiesBrowser = ({ className, broskies, onBroskieChanged }) => {
             src={broskie.face}
             verticlPosition="center"
             blur={3}
+            lazyLoaded
           />
         </button>
       ))}

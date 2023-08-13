@@ -6,14 +6,9 @@ import BroskiesBrowser from "@components/BroskiesBrowser";
 import MiniGallery from "@components/MiniGallery";
 import Carousel from "@components/Carousel";
 import useWindowWidth from "@hooks/useWindowWidth";
-import Lightbox from "yet-another-react-lightbox";
-import Download from "yet-another-react-lightbox/plugins/download";
-import Zoom from "yet-another-react-lightbox/plugins/zoom";
-import "yet-another-react-lightbox/styles.css";
+import PackedLightbox from "@components/PackedLightbox";
 
 import PropTypes from "prop-types";
-
-// import isommetricGrid from "@assets/isometric-grid.svg";
 
 import { getLang } from "@utils";
 const HomePage = ({ details }) => {
@@ -35,12 +30,6 @@ const HomePage = ({ details }) => {
 
   return (
     <div className="container w-[90%] mx-auto h-full flex flex-col items-center">
-      {/* <div
-        className="absolute -z-10 opacity-50 -translate-x-1/2 left-1/2 bottom-0 w-[300%] sm:w-[250%] md:w-[150%] lg:w-full h-full bg-no-repeat bg-bottom bg-contain"
-        style={{
-          backgroundImage: `url(${isommetricGrid})`,
-        }}
-      ></div> */}
       <main className="grow w-full lg:w-auto grid place-items-center">
         <div className="w-full">
           {
@@ -94,16 +83,9 @@ const HomePage = ({ details }) => {
         />
       </footer>
 
-      <Lightbox
-        open={lightboxSrcset}
-        close={() => setLightboxSrcset(undefined)}
-        slides={lightboxSrcset?.map((img) => ({
-          src: img,
-          downloadFilename: img.split("/").pop() + ".jpg",
-        }))}
-        controller={{ closeOnPullDown: true, closeOnBackdropClick: true }}
-        plugins={[Download, Zoom]}
-        className="ltr"
+      <PackedLightbox
+        srcSet={lightboxSrcset}
+        onClose={() => setLightboxSrcset(undefined)}
       />
     </div>
   );
