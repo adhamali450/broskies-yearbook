@@ -40,21 +40,24 @@ const SideDrawer = ({ className = "" }) => {
         src={logo}
         alt="حمامة شيراتون"
       />
-      <ul className="flex flex-row md:flex-col grow h-full w-full md:h-auto">
+      <div className="flex flex-row md:flex-col grow h-full w-full md:h-auto">
         {links.map((nav, index) => (
-          <li key={index} className={`nav-btn`}>
-            <NavLink to={nav.route} activeclassname="active">
-              <img className="w-8 xmd:w-12" src={nav.icon} alt={nav.text} />
-              <span
-                className="text-sm font-semibold w-min text-center xmd:w-max hidden md:inline"
-                style={{ color: nav.color }}
-              >
-                {nav.text}
-              </span>
-            </NavLink>
-          </li>
+          <NavLink
+            key={index}
+            to={nav.route}
+            className={`nav-btn`}
+            activeclassname="active"
+          >
+            <img className="w-8 xmd:w-12" src={nav.icon} alt={nav.text} />
+            <span
+              className="text-sm font-semibold w-min text-center xmd:w-max hidden md:inline"
+              style={{ color: nav.color }}
+            >
+              {nav.text}
+            </span>
+          </NavLink>
         ))}
-      </ul>
+      </div>
     </aside>
   );
 };

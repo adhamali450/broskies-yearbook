@@ -1397,6 +1397,48 @@ function App() {
     },
     {
       id: 32,
+      name: "حلمي",
+      date: "25.9.2021",
+      tags: ["نويبع", "Moderate consumption", "بايو", "Tony Iommi"],
+      rating: 2.5,
+      points: 0,
+      role: "مستجد",
+      quote:
+        "The mirrors in your mind can reflect the best of yourself, not the worst of someone else",
+      face: [
+        "https://dl.dropboxusercontent.com/scl/fi/k03diyptlk4okqi4wvisz/face-halooma_scaled_down.png?rlkey=gjlm0ult98gfvqg7zcmd5ok82&dl=0",
+        "https://dl.dropboxusercontent.com/scl/fi/ohndhbxn660uh9b3uoh6o/face-halooma.png?rlkey=kupym0gc9llfpfuru4zqexd31&dl=0",
+      ],
+      images: [
+        [
+          "https://dl.dropboxusercontent.com/scl/fi/9pgugcj64z99cj4n1nnuy/WhatsApp-Image-2023-08-13-at-18.02.36_compressed_scaled_down.jpg?rlkey=65qj3je3et0g2wjg5o2l1mxtw&dl=0",
+          "https://dl.dropboxusercontent.com/scl/fi/sii7mrerg0pu478k11atp/WhatsApp-Image-2023-08-13-at-18.02.36_compressed.jpg?rlkey=sga0zdh947qn0v9xu43yavqjs&dl=0",
+          "top",
+        ],
+        [
+          "https://dl.dropboxusercontent.com/scl/fi/ldaa7pro9h23kw11z1o4v/WhatsApp-Image-2023-08-13-at-18.02.37_compressed_scaled_down.jpg?rlkey=3c9ehpm6tqbqfkauoh5mc9crm&dl=0",
+          "https://dl.dropboxusercontent.com/scl/fi/uawi671ykcbpl9ac11l6c/WhatsApp-Image-2023-08-13-at-18.02.37_compressed.jpg?rlkey=gzqupdttpidfk87frlmktu5r4&dl=0",
+          "top",
+        ],
+        [
+          "https://dl.dropboxusercontent.com/scl/fi/a22z5jszm85fpsvootu96/WhatsApp-Image-2023-08-13-at-18.32.03_compressed_scaled_down.jpg?rlkey=s94k9tn3vc6rprrheess4tsyi&dl=0",
+          "https://dl.dropboxusercontent.com/scl/fi/ta8jjtpzrw6la0hx79smw/WhatsApp-Image-2023-08-13-at-18.32.03_compressed.jpg?rlkey=l82v4rmo66ggqvn5dfa4721wo&dl=0",
+          "top",
+        ],
+        [
+          "https://dl.dropboxusercontent.com/scl/fi/z9fb94fjx47tdpsn4e7vh/WhatsApp-Image-2023-08-13-at-18.32.04_compressed_scaled_down.jpg?rlkey=l2rv2a4tr50pj2s4rb585sxe1&dl=0",
+          "https://dl.dropboxusercontent.com/scl/fi/attwwd2l61c86bxmb3ag5/WhatsApp-Image-2023-08-13-at-18.32.04_compressed.jpg?rlkey=do82c99d9h26j0a3163y2i0ub&dl=0",
+          "center",
+        ],
+        [
+          "https://dl.dropboxusercontent.com/scl/fi/pbwuwjcg90mubt9pw8mih/WhatsApp-Image-2023-08-13-at-18.34.25_compressed_scaled_down.jpg?rlkey=e27xsbzdr3d2tamy7446r051u&dl=0",
+          "https://dl.dropboxusercontent.com/scl/fi/9pu5xe85amekt046fu3i7/WhatsApp-Image-2023-08-13-at-18.34.25_compressed.jpg?rlkey=izj10sv4toggxj225pgzbfiok&dl=0",
+          "center",
+        ],
+      ],
+    },
+    {
+      id: 33,
       name: "حسان",
       date: "25.9.2021",
       tags: ["SC (دفعة اصغر)", "شرفي"],
@@ -1457,10 +1499,11 @@ function App() {
       1.7777777777777777,
     ],
     [
-      "https://dl.dropboxusercontent.com/scl/fi/49vsj0g9xz3nya5mfzc79/L_20220819_143101423_scaled_down.jpeg?rlkey=pdiderojzdreui4mnfszj6n0k&dl=0",
-      "https://dl.dropboxusercontent.com/scl/fi/u3r6rscdxxtqskblknmnd/PXL_20220819_143101423.jpeg?rlkey=nxj4abowedme3vwhuktvwg2ak&dl=0",
-      1.7777777777777777,
+      "https://dl.dropboxusercontent.com/scl/fi/fduu98cp8w5z9po4ol1v5/apinsta.app_324845143_562160712186552_3599459270821353216_n_1080_scaled_down.jpg?rlkey=e9ackevswdjji3cf3dkfkanx3&dl=0",
+      "https://dl.dropboxusercontent.com/scl/fi/yna7hocxgjgpjsaght43i/Snapinsta.app_324845143_562160712186552_3599459270821353216_n_1080.jpg?rlkey=61z5o79w8c7ss6u77culasnom&dl=0",
+      1.3219094247246022,
     ],
+
     [
       "https://dl.dropboxusercontent.com/scl/fi/9jhhd0b8w1ybnb1i4xch0/L_20220819_145723693_scaled_down.jpeg?rlkey=mpd4ahvt2w9i5tmji90hk2gsc&dl=0",
       "https://dl.dropboxusercontent.com/scl/fi/sss7vpe71dsm4i62gj4v1/PXL_20220819_145723693.jpeg?rlkey=rkilg6tc1hpnsai7ml3lzbhxl&dl=0",
@@ -1472,6 +1515,11 @@ function App() {
       1.7777777777777777,
     ],
     [
+      "https://dl.dropboxusercontent.com/scl/fi/xwka5vhcda7uehyubmev1/atsApp-Image-2022-12-29-at-9.10.22-PM-2_scaled_down.jpeg?rlkey=37t7can5fmkj302rb9ygvaaya&dl=0",
+      "https://dl.dropboxusercontent.com/scl/fi/evrtt8x6rhtwwipg397jw/WhatsApp-Image-2022-12-29-at-9.10.22-PM-2.jpeg?rlkey=bg656oje3r9xb3nnhqqjzg5k9&dl=0",
+      1.7777777777777777,
+    ],
+    [
       "https://dl.dropboxusercontent.com/scl/fi/62dg2rw1g81q8gzd92jda/apinsta.app_324855207_3492073867729182_5138445503043831195_n_1080_scaled_down.jpeg?rlkey=u9qqsr86k668e8fsulgp7lw7k&dl=0",
       "https://dl.dropboxusercontent.com/scl/fi/pwbwqawiky41vzvpgmvv2/Snapinsta.app_324855207_3492073867729182_5138445503043831195_n_1080.jpeg?rlkey=p1a6b1vlv7becj82bcu22qc6s&dl=0",
       0.8,
@@ -1480,6 +1528,11 @@ function App() {
       "https://dl.dropboxusercontent.com/scl/fi/39mkg5o80ben7k5c5908x/apinsta.app_325273604_716598833444051_4064935153331406929_n_1080_scaled_down.jpeg?rlkey=2m8ka7fs2gtjb7d7yzurnvpvt&dl=0",
       "https://dl.dropboxusercontent.com/scl/fi/nvagdhzsvyqm30zzcairk/Snapinsta.app_325273604_716598833444051_4064935153331406929_n_1080.jpeg?rlkey=otl0kbv1vwkdo9sx1bpgpj3oy&dl=0",
       0.8773354995938262,
+    ],
+    [
+      "https://dl.dropboxusercontent.com/scl/fi/3ngtp1y8jf2o2tnsmnzu0/atsApp-Image-2023-08-07-at-11.51.07_scaled_down.jpeg?rlkey=wbmuk4msjk1xsveywjwss4uuh&dl=0",
+      "https://dl.dropboxusercontent.com/scl/fi/11yz3ypfybzx6188u5deu/WhatsApp-Image-2023-08-07-at-11.51.07.jpeg?rlkey=mfih3d9c3yu6xrh9hwtlmuwp5&dl=0",
+      2.1207658321060383,
     ],
     [
       "https://dl.dropboxusercontent.com/scl/fi/4nszi45mx8e66ccef8zgd/apinsta.app_325309946_156365237170932_2129811349033053585_n_1024_scaled_down.jpeg?rlkey=i6jn6agn4x2lu1dcumvox74sx&dl=0",
@@ -1540,11 +1593,6 @@ function App() {
       "https://dl.dropboxusercontent.com/scl/fi/ckx3d7x6xsi4j7jw344x3/atsApp-Image-2023-08-07-at-11.51.01_scaled_down.jpeg?rlkey=i30kybb95wdd5yyhc3buqr42a&dl=0",
       "https://dl.dropboxusercontent.com/scl/fi/dvoxj2xe0rrzn3p5rga2w/WhatsApp-Image-2023-08-07-at-11.51.01.jpeg?rlkey=c30h3y8ciskh8bqvhanfdosk7&dl=0",
       0.75,
-    ],
-    [
-      "https://dl.dropboxusercontent.com/scl/fi/3ngtp1y8jf2o2tnsmnzu0/atsApp-Image-2023-08-07-at-11.51.07_scaled_down.jpeg?rlkey=wbmuk4msjk1xsveywjwss4uuh&dl=0",
-      "https://dl.dropboxusercontent.com/scl/fi/11yz3ypfybzx6188u5deu/WhatsApp-Image-2023-08-07-at-11.51.07.jpeg?rlkey=mfih3d9c3yu6xrh9hwtlmuwp5&dl=0",
-      2.1207658321060383,
     ],
     [
       "https://dl.dropboxusercontent.com/scl/fi/31unsj30lxj6tp312cr20/atsApp-Image-2023-08-07-at-11.51.09_scaled_down.jpeg?rlkey=c89opikz6eivjro2j0x8wj2nl&dl=0",
@@ -1660,11 +1708,6 @@ function App() {
       "https://dl.dropboxusercontent.com/scl/fi/66x2z2m3yrp2cu81zzt4o/apinsta.app_324710930_723582809336954_8912534861103992695_n_1080_scaled_down.jpeg?rlkey=m20z7up1xfzh4w9x2cxveqyzu&dl=0",
       "https://dl.dropboxusercontent.com/scl/fi/1x8n3s2vkjbw9z5k10n2i/Snapinsta.app_324710930_723582809336954_8912534861103992695_n_1080.jpeg?rlkey=rccqobvjwpwuwex8oymqb1kwg&dl=0",
       1.0,
-    ],
-    [
-      "https://dl.dropboxusercontent.com/scl/fi/nv7gb1yzl2yleq7ktdxzs/4188073_1761056084328746_2709425316826775107_n_scaled_down.jpeg?rlkey=wv4r3xye18u8bmituklk76hl3&dl=0",
-      "https://dl.dropboxusercontent.com/scl/fi/cfa5pw02m5x16r3bkmerh/364188073_1761056084328746_2709425316826775107_n.jpeg?rlkey=6wpgksdj1se23x204cw8zz2br&dl=0",
-      1.3333333333333333,
     ],
     [
       "https://dl.dropboxusercontent.com/scl/fi/l3ibmimm12ansgvd9wboy/4191241_1464392157644260_3846226135946430105_n_scaled_down.jpeg?rlkey=p3mc1ziaazbt9gyq2y6y5vqbh&dl=0",
@@ -1915,9 +1958,9 @@ function App() {
       1.3219094247246022,
     ],
     [
-      "https://dl.dropboxusercontent.com/scl/fi/fduu98cp8w5z9po4ol1v5/apinsta.app_324845143_562160712186552_3599459270821353216_n_1080_scaled_down.jpg?rlkey=e9ackevswdjji3cf3dkfkanx3&dl=0",
-      "https://dl.dropboxusercontent.com/scl/fi/yna7hocxgjgpjsaght43i/Snapinsta.app_324845143_562160712186552_3599459270821353216_n_1080.jpg?rlkey=61z5o79w8c7ss6u77culasnom&dl=0",
-      1.3219094247246022,
+      "https://dl.dropboxusercontent.com/scl/fi/49vsj0g9xz3nya5mfzc79/L_20220819_143101423_scaled_down.jpeg?rlkey=pdiderojzdreui4mnfszj6n0k&dl=0",
+      "https://dl.dropboxusercontent.com/scl/fi/u3r6rscdxxtqskblknmnd/PXL_20220819_143101423.jpeg?rlkey=nxj4abowedme3vwhuktvwg2ak&dl=0",
+      1.7777777777777777,
     ],
     [
       "https://dl.dropboxusercontent.com/scl/fi/2c5zsuosxa4mutxv47itu/atsApp-Image-2023-01-06-at-11.05.32-PM-1_scaled_down.jpg?rlkey=nkhwfgmu2y6xown6pqm0jg0pn&dl=0",
@@ -2109,11 +2152,6 @@ function App() {
     [
       "https://dl.dropboxusercontent.com/scl/fi/i7nz3rnugu3m316tik298/apinsta.app_325786387_3062632807216122_5874315012586868595_n_1080_scaled_down.jpg?rlkey=vz5xt99ltls2lxz7137goy8aw&dl=0",
       "https://dl.dropboxusercontent.com/scl/fi/mp7srmw3sj42cb344nd28/Snapinsta.app_325786387_3062632807216122_5874315012586868595_n_1080.jpg?rlkey=qsex8gj8q9c62die8dekks4mz&dl=0",
-      1.0,
-    ],
-    [
-      "https://dl.dropboxusercontent.com/scl/fi/hqa2tdeq7furqctid0yqq/apinsta.app_325859584_522069263392746_5690475050221942497_n_1080_scaled_down.jpg?rlkey=ncjjbzug9d9wlc29uo8xa0it6&dl=0",
-      "https://dl.dropboxusercontent.com/scl/fi/w8ageb99xcimxe4ghaf0q/Snapinsta.app_325859584_522069263392746_5690475050221942497_n_1080.jpg?rlkey=tg0bh1q3u3kb2cvzvvaubmnfa&dl=0",
       1.0,
     ],
     [
