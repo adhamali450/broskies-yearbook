@@ -42,12 +42,8 @@ const SideDrawer = ({ className = "" }) => {
       />
       <ul className="flex flex-row md:flex-col grow h-full w-full md:h-auto">
         {links.map((nav, index) => (
-          <li key={index}>
-            <NavLink
-              to={nav.route}
-              className={`nav-btn`}
-              activeclassname="active"
-            >
+          <li key={index} className={`nav-btn`}>
+            <NavLink to={nav.route} activeclassname="active">
               <img className="w-8 xmd:w-12" src={nav.icon} alt={nav.text} />
               <span
                 className="text-sm font-semibold w-min text-center xmd:w-max hidden md:inline"
