@@ -1575,6 +1575,11 @@ function App() {
       0.8,
     ],
     [
+      "https://dl.dropboxusercontent.com/scl/fi/q6q6ibegogac11vtx6j2j/WhatsApp-Image-2023-07-12-at-02.11.342123_compressed_scaled_down.jpgrlkey=qt03g477vuggc8o82fvineqkm&dl=0",
+      "https://dl.dropboxusercontent.com/scl/fi/q4dyu839brwce22v0d3sb/WhatsApp-Image-2023-07-12-at-02.11.342123_compressed.jpg?rlkey=pxi9g80h3oeljt57l8i66rfqz&dl=0",
+      0.75,
+    ],
+    [
       "https://dl.dropboxusercontent.com/scl/fi/kl3q6raqdmxlgn6nigbgr/apinsta.app_325649429_577014164368047_2136377605371966923_n_1080_scaled_down.jpeg?rlkey=7auhymy13448tjcbt7h5ekbhl&dl=0",
       "https://dl.dropboxusercontent.com/scl/fi/ah8aftvwyynwjjdesnuko/Snapinsta.app_325649429_577014164368047_2136377605371966923_n_1080.jpeg?rlkey=7p4n9h3pbiwm2qnubgqe180q0&dl=0",
       0.8777335984095428,
