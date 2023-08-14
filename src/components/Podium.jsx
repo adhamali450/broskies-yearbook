@@ -13,26 +13,26 @@ const Podium = ({ className, winners, colors }) => {
         <div className={styles["img-container"]}>
           <MiniImage
             className={styles["mini-img"]}
-            src={winners[2].face}
+            src={winners[1].face}
             style={{
-              borderColor: `${colors[2]}`,
+              borderColor: `${colors[1]}`,
             }}
           />
           <span
             className={styles["rank"]}
             style={{
-              backgroundColor: colors[2],
+              backgroundColor: colors[1],
               color: "rgba(0,0,0,0.5)",
             }}
           >
-            {arNum(3)}
+            {arNum(2)}
           </span>
         </div>
-        <span className={styles["name"]}>{winners[2].name}</span>
+        <span className={styles["name"]}>{winners[1].name}</span>
         <span
           className={styles["points"]}
           style={{
-            backgroundColor: colors[2],
+            backgroundColor: colors[1],
             color: "rgba(0,0,0,0.5)",
           }}
         >
@@ -74,30 +74,30 @@ const Podium = ({ className, winners, colors }) => {
         <div className={styles["img-container"]}>
           <MiniImage
             className={styles["mini-img"]}
-            src={winners[1].face}
+            src={winners[2].face}
             style={{
-              borderColor: `${colors[1]}`,
+              borderColor: `${colors[2]}`,
             }}
           />
           <span
             className={styles["rank"]}
             style={{
-              backgroundColor: colors[1],
+              backgroundColor: colors[2],
               color: "rgba(0,0,0,0.5)",
             }}
           >
-            {arNum(2)}
+            {arNum(3)}
           </span>
         </div>
-        <span className={styles["name"]}>{winners[1].name}</span>
+        <span className={styles["name"]}>{winners[2].name}</span>
         <span
           className={styles["points"]}
           style={{
-            backgroundColor: colors[1],
+            backgroundColor: colors[2],
             color: "rgba(0,0,0,0.5)",
           }}
         >
-          {arNum(winners[1].points)}
+          {arNum(winners[2].points)}
         </span>
       </div>
     </div>
