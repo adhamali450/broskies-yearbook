@@ -36,7 +36,7 @@ const Podium = ({ className, winners, colors }) => {
             color: "rgba(0,0,0,0.5)",
           }}
         >
-          {arNum(winners[2].points)}
+          {arNum(winners[1].points)}
         </span>
       </div>
       <div className={styles["pos-1st"]}>
