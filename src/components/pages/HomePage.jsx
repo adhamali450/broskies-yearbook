@@ -75,7 +75,7 @@ const HomePage = ({ details }) => {
         </div>
       </main>
 
-      <footer className="relative w-[90vw] md:w-[75vw] rounded-lg md:rounded-xl bg-[#333333] overflow-hidden">
+      <footer className="relative w-[90vw] md:w-[75vw] rounded-lg md:rounded-xl bg-[#333333] overflow-scroll">
         <BroskiesBrowser
           className="flex w-max gap-1 md:gap-2 justify-end items-center p-1 md:p-2"
           broskies={details.map((d) => ({ id: d.id, face: d.face }))}
