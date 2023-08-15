@@ -5,10 +5,10 @@ import grimReaper from "@icons/grim-reaper.svg";
 
 const TechnicalIssuePage = () => {
   return (
-    <div className="relative w-full h-[100vh] flex items-center justify-center flex-col gap-4">
+    <div className="relative w-full h-[100vh] flex items-center justify-center flex-col gap-4 overflow-hidden">
       <img className="w-[250px]" src={logo} alt="حمامة شيراتون" />
       <h1
-        className="text-2xl"
+        className="text-2xl text-center"
         style={{
           lineHeight: "2.3rem",
         }}
