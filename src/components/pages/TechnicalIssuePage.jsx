@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "@assets/logo.svg";
 import iconInstagram from "@icons/instagram.svg";
 import grimReaper from "@icons/grim-reaper.svg";
