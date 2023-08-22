@@ -1164,7 +1164,7 @@ function App() {
       tags: ["نويبع", "Moderate consumption", "بايو", "Tony Iommi", "الهوست"],
       rating: 4,
       points: 0,
-      role: "مستجد",
+      role: "عضو",
       quote:
         "The mirrors in your mind can reflect the best of yourself, not the worst of someone else",
       face: ["https://iili.io/HpXl2Xp.png", "https://iili.io/HpXldIR.png"],
@@ -1217,6 +1217,37 @@ function App() {
           "center",
         ],
         ["https://iili.io/HpXePpV.jpg", "https://iili.io/HpXesTB.jpg", "top"],
+      ],
+    },
+    {
+      id: 34,
+      name: "مروان حاتم",
+      date: "25.9.2021",
+      tags: ["CS", "بيسكيت", "دحيح"],
+      rating: 2.5,
+      points: 0,
+      role: "صنم",
+      quote:
+        "There is nothing impossible for those who will, try always you will never know the outcome until you try",
+      face: ["https://iili.io/Hpva2Pj.png", "https://iili.io/HpvYLPf.png"],
+      images: [
+        [
+          "https://iili.io/HpvaFKx.jpg",
+          "https://iili.io/Hpv7Je9.jpg",
+          "center",
+        ],
+        ["https://iili.io/HpvafSV.jpg", "https://iili.io/Hpv73zu.jpg", "top"],
+        ["https://iili.io/HpvaBHB.jpg", "https://iili.io/Hpv7Ksj.jpg", "top"],
+        [
+          "https://iili.io/HpvaCAP.jpg",
+          "https://iili.io/Hpv7B0Q.jpg",
+          "center",
+        ],
+        [
+          "https://iili.io/HpvaoDF.jpg",
+          "https://iili.io/Hpv7odB.jpg",
+          "center",
+        ],
       ],
     },
   ];
