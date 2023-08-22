@@ -23,12 +23,12 @@ function App() {
         "I choose to feel good. I choose to feel free. I will fight for everything I love forever. And I will love everything that I fight for, forever.",
       face: ["https://iili.io/HpXlLyG.png", "https://iili.io/HpXlsvs.png"],
       images: [
-        ["https://iili.io/HpXM1s4.webp", "https://iili.io/HpXMGql.webp", "top"],
         [
           "https://iili.io/HpXMM12.webp",
           "https://iili.io/HpXMVgS.webp",
           "center",
         ],
+        ["https://iili.io/HpXM1s4.webp", "https://iili.io/HpXMGql.webp", "top"],
         [
           "https://iili.io/HpXMXd7.webp",
           "https://iili.io/HpXMh79.webp",
