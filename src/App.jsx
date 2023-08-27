@@ -1310,7 +1310,6 @@ function App() {
       "https://iili.io/HpXsOTg.jpg",
       1.3316892725030827,
     ],
-    ["https://iili.io/HphyQXS.jpg", "https://iili.io/HphyZL7.jpg", 0.75],
     [
       "https://iili.io/HpXseja.jpg",
       "https://iili.io/HpXskZJ.jpg",
