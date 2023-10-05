@@ -28,10 +28,10 @@ const Carousel = ({ className = "", src, memberDetails, onImageSelected }) => {
     <div
       className={`${className} relative w-[100%] md:w-[80%] xmd:w-[60%] h-[100%] mx-auto`}
     >
-      <div className="absolute top-11 -right-16 rounded-full bg-[#bf0fff95] w-80 h-72 filter blur-2xl opacity-10"></div>
+      {/* <div className="absolute top-11 -right-16 rounded-full bg-[#bf0fff95] w-80 h-72 filter blur-2xl opacity-10"></div>
       <div className="absolute bottom-1 -left-1 rounded-full bg-[#570fff] w-80 h-72 filter blur-2xl opacity-10"></div>
       <div className="absolute rounded-full bg-fuchsia-300 -bottom-1 right-15 w-72 h-72 filter blur-3xl opacity-40"></div>
-      <div className="absolute rounded-full bg-[#22d3ee] -bottom-1 left-1 w-72 h-72 filter blur-3xl opacity-40"></div>
+      <div className="absolute rounded-full bg-[#22d3ee] -bottom-1 left-1 w-72 h-72 filter blur-3xl opacity-40"></div> */}
       <div className="overflow-hidden relative w-full h-full rounded-xl">
         {/* Upper toggle buttons */}
         <div className={styles["upper-toggles"]}>

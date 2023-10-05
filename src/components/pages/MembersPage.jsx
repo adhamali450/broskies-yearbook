@@ -36,7 +36,7 @@ const Header = ({ className, title, icon }) => {
 const MembersPage = ({ members }) => {
   return (
     <div className="relative h-full flex flex-col ">
-      <div className="-z-10 absolute bg-[#bbc0167a] w-[35%] h-[60%] translate-x-1/2 right-40  rounded-[90%] blur-3xl opacity-20 "></div>
+      {/* <div className="-z-10 absolute bg-[#bbc0167a] w-[35%] h-[60%] translate-x-1/2 right-40  rounded-[90%] blur-3xl opacity-20 "></div> */}
 
       <div className="p-4 md:p-6 lg:p-8 w-full">
         <Header title="أعمداء" icon={membersIcons.column} />

@@ -30,8 +30,8 @@ const MiniGallery = ({ className = "", src, onImageSelected, tags }) => {
           )}
         </div>
 
-        <div className="absolute rounded-full bg-fuchsia-300 -bottom-1 right-15 w-72 h-72 filter blur-3xl opacity-60"></div>
-        <div className="absolute rounded-full bg-[#22d3ee] -bottom-1 left-1 w-72 h-72 filter blur-3xl opacity-60"></div>
+        {/* <div className="absolute rounded-full bg-fuchsia-300 -bottom-1 right-15 w-72 h-72 filter blur-3xl opacity-60"></div>
+        <div className="absolute rounded-full bg-[#22d3ee] -bottom-1 left-1 w-72 h-72 filter blur-3xl opacity-60"></div> */}
       </div>
       <div className="col-start-2 img-grid grid-rows-2">
         <Suspense>
@@ -54,8 +54,8 @@ const MiniGallery = ({ className = "", src, onImageSelected, tags }) => {
         </Suspense>
       </div>
       <div className="relative col-start-3 img-grid grid-rows-[2fr_1fr]">
-        <div className="absolute top-11 -right-16 rounded-full bg-[#bf0fff95] w-80 h-72 filter blur-2xl opacity-30"></div>
-        <div className="absolute bottom-1 -left-1 rounded-full bg-[#570fff] w-80 h-72 filter blur-2xl opacity-30"></div>
+        {/* <div className="absolute top-11 -right-16 rounded-full bg-[#bf0fff95] w-80 h-72 filter blur-2xl opacity-30"></div>
+        <div className="absolute bottom-1 -left-1 rounded-full bg-[#570fff] w-80 h-72 filter blur-2xl opacity-30"></div> */}
         <Suspense>
           <MiniImage
             className="z-10 rounded-xl cursor-zoom-in"
