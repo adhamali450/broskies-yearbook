@@ -1,4 +1,5 @@
-import MiniImage from "@components/MiniImage";
+import { lazy, Suspense } from "react";
+const MiniImage = lazy(() => import("@components/MiniImage"));
 import styles from "@components/Podium.module.sass";
 import iconCrown from "@assets/crown.svg";
 import PropTypes from "prop-types";
@@ -11,13 +12,15 @@ const Podium = ({ className, winners, colors }) => {
       <span className={styles["block-center"]}></span>
       <div className={styles["pos-3rd"]}>
         <div className={styles["img-container"]}>
-          <MiniImage
-            className={styles["mini-img"]}
-            src={winners[1].face}
-            style={{
-              borderColor: `${colors[1]}`,
-            }}
-          />
+          <Suspense>
+            <MiniImage
+              className={styles["mini-img"]}
+              src={winners[1].face}
+              style={{
+                borderColor: `${colors[1]}`,
+              }}
+            />
+          </Suspense>
           <span
             className={styles["rank"]}
             style={{
@@ -42,13 +45,15 @@ const Podium = ({ className, winners, colors }) => {
       <div className={styles["pos-1st"]}>
         <div className={styles["img-container"]}>
           <img className="w-12 md:w-14 -mb-1" src={iconCrown} alt="Crown" />
-          <MiniImage
-            className={styles["mini-img"]}
-            src={winners[0].face}
-            style={{
-              borderColor: `${colors[0]}`,
-            }}
-          />
+          <Suspense>
+            <MiniImage
+              className={styles["mini-img"]}
+              src={winners[0].face}
+              style={{
+                borderColor: `${colors[0]}`,
+              }}
+            />
+          </Suspense>
           <span
             className={styles["rank"]}
             style={{
@@ -72,13 +77,15 @@ const Podium = ({ className, winners, colors }) => {
       </div>
       <div className={styles["pos-2nd"]}>
         <div className={styles["img-container"]}>
-          <MiniImage
-            className={styles["mini-img"]}
-            src={winners[2].face}
-            style={{
-              borderColor: `${colors[2]}`,
-            }}
-          />
+          <Suspense>
+            <MiniImage
+              className={styles["mini-img"]}
+              src={winners[2].face}
+              style={{
+                borderColor: `${colors[2]}`,
+              }}
+            />
+          </Suspense>
           <span
             className={styles["rank"]}
             style={{

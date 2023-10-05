@@ -1,6 +1,6 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, lazy, Suspense } from "react";
+const MiniImage = lazy(() => import("@components/MiniImage"));
 import PropTypes from "prop-types";
-import MiniImage from "@components/MiniImage";
 
 const BroskiesBrowser = ({ className, broskies, onBroskieChanged }) => {
   const [selectedId, setSelectedId] = useState(0);
@@ -38,13 +38,15 @@ const BroskiesBrowser = ({ className, broskies, onBroskieChanged }) => {
           ref={(ref) => (containerRefs.current[broskie.id] = ref)}
           onClick={() => broskieChangedHandler(broskie.id)}
         >
-          <MiniImage
-            className="w-full h-full"
-            src={broskie.face}
-            verticlPosition="center"
-            blur={3}
-            lazyLoaded
-          />
+          <Suspense>
+            <MiniImage
+              className="w-full h-full"
+              src={broskie.face}
+              verticlPosition="center"
+              blur={3}
+              lazyLoaded
+            />
+          </Suspense>
         </button>
       ))}
     </div>

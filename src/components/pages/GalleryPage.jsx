@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
-import MiniImage from "@components/MiniImage";
+const MiniImage = lazy(() => import("@components/MiniImage"));
+
 import { imageClickedHandler } from "@/utils";
 import PackedLightbox from "@components/PackedLightbox";
 
@@ -19,23 +20,24 @@ const GalleryPage = ({ images }) => {
       <ResponsiveMasonry columnsCountBreakPoints={{ 350: 2, 750: 3 }}>
         <Masonry gutter="10px">
           {images.map((_, i) => (
-            <MiniImage
-              className="w-full block"
-              key={i}
-              src={images[i]}
-              blur={10}
-              lazyLoad
-              aspectRatio={images[i][2]}
-              preserveAspectRatio
-              style={{
-                aspectRatio: images[i][2],
-                cursor: "zoom-in",
-              }}
-              onClick={(img) =>
-                imageClickedHandler(images, img, setLightboxSrcset)
-              }
-              lazyLoaded
-            />
+            <Suspense key={i}>
+              <MiniImage
+                className="w-full block"
+                src={images[i]}
+                blur={10}
+                lazyLoad
+                aspectRatio={images[i][2]}
+                preserveAspectRatio
+                style={{
+                  aspectRatio: images[i][2],
+                  cursor: "zoom-in",
+                }}
+                onClick={(img) =>
+                  imageClickedHandler(images, img, setLightboxSrcset)
+                }
+                lazyLoaded
+              />
+            </Suspense>
           ))}
         </Masonry>
       </ResponsiveMasonry>

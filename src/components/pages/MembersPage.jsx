@@ -1,6 +1,7 @@
+import { lazy, Suspense } from "react";
 import PropTypes from "prop-types";
 import membersIcons from "@icons/members";
-import MiniImage from "@components/MiniImage";
+const MiniImage = lazy(() => import("@components/MiniImage"));
 // import { NavLink } from "react-router-dom";
 import styles from "@pages/Members.module.sass";
 
@@ -8,14 +9,16 @@ const MembersGrid = ({ members }) => {
   return (
     <div className={styles["members-grid"]}>
       {members.map((member, index) => (
-        <div className={styles["member-container"]} key={index}>
-          <MiniImage
-            className={styles["mini-img"]}
-            src={member.face}
-            verticlPosition="center"
-          />
-          <h3 className="text-sm mt-2">{member.name}</h3>
-        </div>
+        <Suspense key={index}>
+          <div className={styles["member-container"]}>
+            <MiniImage
+              className={styles["mini-img"]}
+              src={member.face}
+              verticlPosition="center"
+            />
+            <h3 className="text-sm mt-2">{member.name}</h3>
+          </div>
+        </Suspense>
       ))}
     </div>
   );

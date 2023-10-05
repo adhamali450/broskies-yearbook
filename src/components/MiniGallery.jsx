@@ -1,6 +1,6 @@
-import { memo } from "react";
+import { memo, lazy, Suspense } from "react";
 import PropTypes from "prop-types";
-import MiniImage from "@components/MiniImage";
+const MiniImage = lazy(() => import("@components/MiniImage"));
 import Badges from "@components/Badges";
 import { imageClickedHandler } from "@/utils";
 
@@ -11,14 +11,15 @@ const MiniGallery = ({ className = "", src, onImageSelected, tags }) => {
     >
       <div className="relative col-start-1">
         <div className="relative w-full h-full rounded-xl overflow-hidden">
-          <MiniImage
-            className="w-full h-full  z-10 rounded-xl cursor-zoom-in"
-            src={src[0].slice(0, 2)}
-            verticalPosition={src[0][2]}
-            onClick={(img) => imageClickedHandler(src, img, onImageSelected)}
-            blur={6}
-          />
-
+          <Suspense>
+            <MiniImage
+              className="w-full h-full  z-10 rounded-xl cursor-zoom-in"
+              src={src[0].slice(0, 2)}
+              verticalPosition={src[0][2]}
+              onClick={(img) => imageClickedHandler(src, img, onImageSelected)}
+              blur={6}
+            />
+          </Suspense>
           {tags && (
             <div className="z-20 absolute inset-0 bg-gradient-to-t from-rgba-black-0.8 via-transparent to-transparent p-5 flex items-end pointer-events-none">
               <Badges
@@ -33,38 +34,46 @@ const MiniGallery = ({ className = "", src, onImageSelected, tags }) => {
         <div className="absolute rounded-full bg-[#22d3ee] -bottom-1 left-1 w-72 h-72 filter blur-3xl opacity-60"></div>
       </div>
       <div className="col-start-2 img-grid grid-rows-2">
-        <MiniImage
-          className="z-10 rounded-xl cursor-zoom-in"
-          src={src[1].slice(0, 2)}
-          verticalPosition={src[1][2]}
-          onClick={(img) => imageClickedHandler(src, img, onImageSelected)}
-          blur={6}
-        />
-        <MiniImage
-          className="z-10 rounded-xl cursor-zoom-in"
-          src={src[2].slice(0, 2)}
-          verticalPosition={src[2][2]}
-          onClick={(img) => imageClickedHandler(src, img, onImageSelected)}
-          blur={6}
-        />
+        <Suspense>
+          <MiniImage
+            className="z-10 rounded-xl cursor-zoom-in"
+            src={src[1].slice(0, 2)}
+            verticalPosition={src[1][2]}
+            onClick={(img) => imageClickedHandler(src, img, onImageSelected)}
+            blur={6}
+          />
+        </Suspense>
+        <Suspense>
+          <MiniImage
+            className="z-10 rounded-xl cursor-zoom-in"
+            src={src[2].slice(0, 2)}
+            verticalPosition={src[2][2]}
+            onClick={(img) => imageClickedHandler(src, img, onImageSelected)}
+            blur={6}
+          />
+        </Suspense>
       </div>
       <div className="relative col-start-3 img-grid grid-rows-[2fr_1fr]">
         <div className="absolute top-11 -right-16 rounded-full bg-[#bf0fff95] w-80 h-72 filter blur-2xl opacity-30"></div>
         <div className="absolute bottom-1 -left-1 rounded-full bg-[#570fff] w-80 h-72 filter blur-2xl opacity-30"></div>
-        <MiniImage
-          className="z-10 rounded-xl cursor-zoom-in"
-          src={src[3].slice(0, 2)}
-          verticalPosition={src[3][2]}
-          onClick={(img) => imageClickedHandler(src, img, onImageSelected)}
-          blur={6}
-        />
-        <MiniImage
-          className="z-10 rounded-xl cursor-zoom-in"
-          src={src[4].slice(0, 2)}
-          verticalPosition={src[4][2]}
-          onClick={(img) => imageClickedHandler(src, img, onImageSelected)}
-          blur={6}
-        />
+        <Suspense>
+          <MiniImage
+            className="z-10 rounded-xl cursor-zoom-in"
+            src={src[3].slice(0, 2)}
+            verticalPosition={src[3][2]}
+            onClick={(img) => imageClickedHandler(src, img, onImageSelected)}
+            blur={6}
+          />
+        </Suspense>
+        <Suspense>
+          <MiniImage
+            className="z-10 rounded-xl cursor-zoom-in"
+            src={src[4].slice(0, 2)}
+            verticalPosition={src[4][2]}
+            onClick={(img) => imageClickedHandler(src, img, onImageSelected)}
+            blur={6}
+          />
+        </Suspense>
       </div>
     </div>
   );

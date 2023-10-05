@@ -1,4 +1,5 @@
-import MiniImage from "@components/MiniImage";
+import { lazy, Suspense } from "react";
+const MiniImage = lazy(() => import("@components/MiniImage"));
 import Rating from "@components/Rating";
 import Podium from "@components/Podium";
 import styles from "@pages/LeaderboardPage.module.sass";
@@ -34,10 +35,12 @@ const LeaderboardPage = ({ leaderboardDetails }) => {
               >
                 {arNum(index + 4)}
               </span>
-              <MiniImage
-                className="w-[60px] h-[60px] md:w-[70px] md:h-[70px] rounded-md"
-                src={user.face}
-              />
+              <Suspense>
+                <MiniImage
+                  className="w-[60px] h-[60px] md:w-[70px] md:h-[70px] rounded-md"
+                  src={user.face}
+                />
+              </Suspense>
               <div className="flex flex-col gap-1 grow">
                 <span className="text-sm md:text-base font-bold">
                   {user.name}
