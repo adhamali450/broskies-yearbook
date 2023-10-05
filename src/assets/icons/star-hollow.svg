@@ -1,12 +1,1 @@
-<svg width="42" height="40" viewBox="0 0 42 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M19.7523 0.593375L14.2743 12.8814L0.896263 14.2944C0.0352635 14.3854 -0.310735 15.4524 0.332264 16.0314L10.3253 25.0364L7.53426 38.1974C7.35426 39.0444 8.26226 39.7034 9.01226 39.2714L20.6653 32.5484L32.3182 39.2704C33.0682 39.7024 33.9752 39.0434 33.7962 38.1964L31.0052 25.0354L40.9982 16.0304C41.6412 15.4514 41.2942 14.3844 40.4342 14.2934L27.0562 12.8804L21.5783 0.592375C21.2263 -0.197625 20.1043 -0.197625 19.7523 0.593375Z" fill="url(#paint0_radial_274_256)"/>
-<defs>
-<radialGradient id="paint0_radial_274_256" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(48.58 16.0441) rotate(180) scale(46.2097 23.1052)">
-<stop stop-color="#FAFAFB"/>
-<stop offset="0.293" stop-color="#F6F7F8"/>
-<stop offset="0.566" stop-color="#EBECEE"/>
-<stop offset="0.832" stop-color="#D8DCDF"/>
-<stop offset="1" stop-color="#C8CDD1"/>
-</radialGradient>
-</defs>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="40" fill="none" xmlns:v="https://vecta.io/nano"><path d="M19.752.593l-5.478 12.288L.896 14.294a1 1 0 0 0-.564 1.737l9.993 9.005-2.791 13.161c-.18.847.728 1.506 1.478 1.074l11.653-6.723 11.653 6.722c.75.432 1.657-.227 1.478-1.074l-2.791-13.161 9.993-9.005c.643-.579.296-1.646-.564-1.737L27.056 12.88 21.578.592a1 1 0 0 0-1.826.001z" fill="url(#A)"/><defs><radialGradient id="A" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(48.58 16.0441) rotate(180) scale(46.2097 23.1052)"><stop stop-color="#fafafb"/><stop offset=".293" stop-color="#f6f7f8"/><stop offset=".566" stop-color="#ebecee"/><stop offset=".832" stop-color="#d8dcdf"/><stop offset="1" stop-color="#c8cdd1"/></radialGradient></defs></svg>
