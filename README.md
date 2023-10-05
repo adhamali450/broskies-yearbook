@@ -1,11 +1,15 @@
 # FCIS Broskies Yearbook
 
-A documentation yearbook for a few friends through their college life
-
-
 ![Preview image](https://iili.io/HphN8zP.jpg)
 
+## Description
 
+A documentation yearbook for a few friends through their college life
+
+- Showcase for each member
+- Our hierarchy (parody)
+- Gallery for the iconic moments
+- Leaderboard for members (based on Messenger group chat activity)
 
 ## Run Locally
 
